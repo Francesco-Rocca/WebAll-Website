@@ -1,119 +1,141 @@
+:root {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
 body {
-    background-color: #10002b;
-
+  background-color: #10002b;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar {
-    background-color: #240046;
-    color: #fff;
-    padding: 10px 0;
+  background-color: #240046;
+  color: #fff;
+  padding: 10px 0;
 }
 
-
 .container {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    height: 70px;
+  height: 70px;
 }
 
 .nav-links {
-    list-style-type: none;
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
-
-
-.nav-links li a {
-    
-        color: #fff;
-        text-decoration: none;
-        font-family: Arial, sans-serif; /* Aggiungi il font desiderato */
-        font-size: 18px; /* Aggiungi la dimensione del font desiderata */
-        font-weight: bold; /* Imposta il testo in grassetto */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif; /* Aggiungi il font desiderato */
+  font-size: 27px; /* Aggiungi la dimensione del font desiderata */
+  font-weight: bold; /* Imposta il testo in grassetto */
+  margin: 16px;
+  float: left;
+  text-align: center;
 }
 .b1 {
-      background-color: #1a1a1a;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .b1:hover {
-
-    box-shadow: 0 8px 12px rgb(0, 26, 255), 0 3px 6px rgb(0, 17, 255);
-  }
+  box-shadow: 0 8px 12px rgb(0, 26, 255), 0 3px 6px rgb(0, 17, 255);
+}
 
 .text-overlay {
-    position: relative;
-    top: 40%;
-    left: 50%;
-    padding-top: 15%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
+  position: relative;
+  padding-top: 5%;
+  text-align: center;
+  color: #fff;
 }
 
 .text-overlay h1 {
-    font-family: Arial, sans-serif;
-    font-size: 3em;
-    font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 4.5em;
+  font-weight: bold;
+  margin-bottom: 0px;
 }
 
 .text-overlay p {
-    font-family: Arial, sans-serif;
-    font-size: 1.5em;
+  font-size: 24px;
+}
+
+.text-overlay p {
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
 }
 .gradient-box {
-    width: 20%;
-    height: 79%;
-    background: linear-gradient(45deg, #240046, #10002b,#05000c);
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
-    z-index: 1; /* Ensure it is above other elements */
+  width: 20%;
+  height: 79%;
+  background: linear-gradient(45deg, #240046, #10002b, #05000c);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it is above other elements */
 }
 .gradient-box2 {
-    width: 18%;
-    height: 78%;
-    background: linear-gradient(45deg, #240046, #10002b, #05000c);
-    position: absolute;
-    top: 58%;
-    left: 15%;
-    transform: translateY(-50%);
-    z-index: 1; /* Ensure it is above other elements */
+  width: 18%;
+  height: 78%;
+  background: linear-gradient(45deg, #240046, #10002b, #05000c);
+  position: absolute;
+  top: 58%;
+  left: 15%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it is above other elements */
 }
 .gradient-box3 {
-    width: 18%;
-    height: 78%;
-    background: linear-gradient(45deg, #240046, #10002b, #05000c);
-    position: absolute;
-    top: 58%;
-    left: 67%;
-    transform: translateY(-50%);
-    z-index: 1; /* Ensure it is above other elements */
+  width: 18%;
+  height: 78%;
+  background: linear-gradient(45deg, #240046, #10002b, #05000c);
+  position: absolute;
+  top: 58%;
+  left: 67%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it is above other elements */
 }
 .gradient-box4 {
-    width: 20%;
-    height: 79%;
-    background: linear-gradient(45deg, #240046, #10002b, #05000c);
-    position: absolute;
-    top: 50%;
-    left: 81%;
-    transform: translateY(-50%);
-    z-index: 1; /* Ensure it is above other elements */
+  width: 20%;
+  height: 79%;
+  background: linear-gradient(45deg, #240046, #10002b, #05000c);
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it is above other elements */
+}
+
+.join-button {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  margin-right: 2%;
+  font-weight: bold;
 }
