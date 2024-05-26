@@ -20,9 +20,16 @@
       </div>
     </nav>
     
-    <div class="content">
-        <h1>Chi Siamo</h1>
-        <p>Benvenuto nella sezione chi siamo</p>
+    <div class="login-container">
+        <h1 class="login-title">WebAll Login</h1>
+        <form action="/login" method="post">
+            <input type="email" class="textconteiner" name="email" placeholder="Email utente" required><br><br>
+            <input type="password"  class="textconteiner" name="password" placeholder="Password" required><br><br>
+            <button id="submitButton" type="submit">Accedi</button>
+        </form>
+    </div>
+    <div class="immagelogo">
+        <img src="logo_bianco.png" alt="Logo" />
     </div>
 </body>
 </html>
