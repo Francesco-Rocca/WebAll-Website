@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentazione</title>
+    <title>azienda</title>
     <link rel="stylesheet" href="style.css">
     <script src="http://52.47.171.54/service/init.js"></script>
 </head>
@@ -15,24 +15,27 @@
           <a href="index.html">Home</a>
           <a href="documentazione.html">Documentazione</a>
           <a href="siamo.html">Chi siamo</a>
-          <a href="accedi.html"disabled>Accedi</a>
+          <a href="accedi.html">Accedi</a>
         </div>
-        <button class="join-button" onclick="openPage()">Utilizza anche tu WebAll</button>
+        <button class="join-button" disabled>Utilizza anche tu WebAll</button>
       </div>
     </nav>
     
-    <div class="login-container">
-        <h1 class="login-title">WebAll Login</h1>
-        <form action="/login" method="post">
+    <div class="login-container3">
+        <h1 class="login-title3">Registrazione Utente</h1>
+        <form action="/registration" method="post">
             <input type="email" class="textconteiner" name="email" placeholder="Email utente" required><br><br>
             <input type="password"  class="textconteiner" name="password" placeholder="Password" required><br><br>
+            <input type="password"  class="textconteiner" name="password-conf" placeholder="Conferma password" required><br><br>
+            <input type="text"  class="textconteiner" name="num-tel" placeholder="Numero felefono" required><br><br>
+            <input type="text"  class="textconteiner" name="indirizzo" placeholder="Indirizzo fatturazione" required><br><br>
             <button id="submitButton" type="submit">Accedi</button>
         </form>
     </div>
-    <div class="immagelogo">
+    <div class="immagelogo2">
         <img src="logo_bianco.png" alt="Logo" />
     </div>
-    <script> //funzione per aprire nuova pagina per la registrazione di un'utente
+    <script>
         function openPage() {
             window.location.href = 'registrazione.html';
         }

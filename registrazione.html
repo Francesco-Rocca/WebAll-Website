@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registrazione</title>
     <link rel="stylesheet" href="style.css">
+    <script src="http://52.47.171.54/service/init.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -24,15 +25,15 @@
         <h1 class="registration-title">Inizia ad utilizzare WebAll</h1>
         <p>Seleziona il pulsante qui sotto seguendo le istruzioni</p>
         <button class="join-button2" onclick="openPage()">Sono un'azienda</button>
-        <button class="join-button2" onclick="openPage()">Sono un'utente web</button>
-        <!-- <form action="/login" method="post">
-            <input type="email" class="textconteiner" name="email" placeholder="Email utente" required><br><br>
-            <input type="password"  class="textconteiner" name="password" placeholder="Password" required><br><br>
-            <button id="submitButton" type="submit">Accedi</button>
-        </form>-->
+        <button class="join-button2" onclick="openPage2()">Sono un utente web</button>
     </div>
-   <!-- <div class="immagelogo">
-        <img src="logo_bianco.png" alt="Logo" />
-    </div>-->
+    <script> //funzione per aprire nuova pagina per la registrazione di un'utente
+        function openPage2() {
+            window.location.href = 'utenti.html';
+        }
+        function openPage() {
+            window.location.href = 'azienda.html';
+        }
+    </script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentazione</title>
     <link rel="stylesheet" href="style.css">
+    <script src="http://52.47.171.54/service/init.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -13,10 +14,10 @@
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="documentazione.html">Documentazione</a>
-          <a href="siamo.html">Chi siamo</a>
+          <a href="siamo.html"disabled>Chi siamo</a>
           <a href="accedi.html">Accedi</a>
         </div>
-        <button class="join-button"></button>Utilizza anche tu WebAll</button>
+        <button class="join-button" onclick="openPage()">Utilizza anche tu WebAll</button>
       </div>
     </nav>
 
@@ -24,5 +25,10 @@
         <h1>Chi Siamo</h1>
         <p>Benvenuto nella sezione chi siamo</p>
     </div>
+    <script>
+      function openPage() {
+            window.location.href = 'registrazione.html';
+        }
+    </script>
 </body>
 </html>

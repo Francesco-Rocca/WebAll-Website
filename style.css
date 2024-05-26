@@ -95,7 +95,6 @@ body {
   top: 50%;
   left: 0%;
   transform: translateY(-50%);
-  z-index: 1; /* Ensure it is above other elements */
 }
 .gradient-box2 {
   width: 18%;
@@ -105,7 +104,6 @@ body {
   top: 58%;
   left: 15%;
   transform: translateY(-50%);
-  z-index: 1; /* Ensure it is above other elements */
 }
 .gradient-box3 {
   width: 18%;
@@ -115,7 +113,6 @@ body {
   top: 58%;
   left: 67%;
   transform: translateY(-50%);
-  z-index: 1; /* Ensure it is above other elements */
 }
 .gradient-box4 {
   width: 20%;
@@ -125,7 +122,6 @@ body {
   top: 50%;
   left: 80%;
   transform: translateY(-50%);
-  z-index: 1; /* Ensure it is above other elements */
 }
 
 .join-button {
@@ -147,7 +143,6 @@ body {
   color: #fff;
   margin-top: 20%;
   margin-left: 20%;
-
 }
 
 .textconteiner{
@@ -184,7 +179,7 @@ body {
 
 #submitButton:hover{
     box-shadow: 0 0 13px #ffffff;
-    border-color: #ffffff;
+    border: #ffffff;
 }
 
 .immagelogo{
@@ -231,3 +226,28 @@ body {
     box-shadow: 0 0 13px #ffffff;
     border-color: #ffffff;
 }
+
+.login-container3{
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10%;
+    margin-left: 20%;
+  
+}
+
+.login-title3{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.immagelogo2{
+    position: relative;
+    top: -40%;
+    left: 61%;
+    width: 500px;
+    height: auto;
+}
+
