@@ -186,6 +186,7 @@ body {
     box-shadow: 0 0 13px #ffffff;
     border-color: #ffffff;
 }
+
 .immagelogo{
     position: relative;
     top: -40%;
@@ -196,3 +197,37 @@ body {
     
 }
 
+.registration-title{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.registration-container{
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.join-button2{
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    height: 70px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-right: 2%;
+    margin-top: 5%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.join-button2:hover{
+    box-shadow: 0 0 13px #ffffff;
+    border-color: #ffffff;
+}

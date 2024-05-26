@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
     <script src="http://52.47.171.54/service/init.js"></script>
   </head>
-
   <body>
     <nav class="navbar">
       <div class="container">
@@ -18,7 +17,7 @@
           <a href="siamo.html">Chi siamo</a>
           <a href="accedi.html">Accedi</a>
         </div>
-        <button class="join-button">Utilizza anche tu WebAll</button>
+        <button class="join-button" onclick="openPage()">Utilizza anche tu WebAll</button>
       </div>
     </nav>
     <div>
@@ -42,5 +41,10 @@
         "
       />
     </div>
+    <script> //funzione per aprire nuova pagina per la registrazione di un'utente
+        function openPage() {
+            window.location.href = 'registrazione.html';
+        }
+    </script>
   </body>
 </html>
