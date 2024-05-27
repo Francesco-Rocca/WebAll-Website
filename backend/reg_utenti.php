@@ -24,7 +24,7 @@ if (!isset($_POST["nome"])
       || !isset($_POST["password-conf"])
       || !isset($_POST["indirizzo"])) {
 
-    header("location: ../registrazione/utenti.php");
+    header("location: ../registrazione/utenti.html");
 }
 
 $nome = $_POST["nome"];

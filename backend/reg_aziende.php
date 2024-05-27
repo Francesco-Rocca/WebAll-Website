@@ -24,7 +24,7 @@ if (!isset($_POST["ragionsoc"])
       || !isset($_POST["password-conf"])
       || !isset($_POST["indirizzo"])) {
 
-    header("location: ../registrazione/utenti.php");
+    header("location: ../registrazione/aziende.html");
 }
 
 $ragione_sociale = $_POST["ragionsoc"];
