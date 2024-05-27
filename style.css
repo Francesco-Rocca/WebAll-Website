@@ -146,6 +146,7 @@ body {
 }
 
 .textconteiner{
+    padding-left: 8px;  
     height: 30px;
     width: 500px;
     border-radius: 5px;
