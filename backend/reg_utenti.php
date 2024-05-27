@@ -26,7 +26,7 @@ $indirizzo = $_POST["indirizzo"];
 
 $stm->bind_param("ssss", $email, $password, $indirizzo, $numtel);
 $s = $stm->execute();
-if (!$) {
+if (!$s) {
     die($stm->error);
 }
 
@@ -35,7 +35,7 @@ $stm = $conn->prepare($sql);
 
 $stm->bind_param("ss", $nome, $cognome);
 $s = $stm->execute();
-if (!$) {
+if (!$s) {
     die($stm->error);
 }
 $conn->close();
