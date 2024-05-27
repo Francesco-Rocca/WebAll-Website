@@ -23,13 +23,18 @@ $password_conf = $_POST["password-conf"];
 $indirizzo = $_POST["indirizzo"];
 
 $stm->bind_param("ssss", $email, $password, $indirizzo, $numtel);
-$stm->execute();
+$s = $stm->execute();
+if (!$) {
+    die($stm->error);
+}
 
 $sql = "INSERT INTO Individuals (id_customer, first_name, last_name) VALUES (LAST_INSERT_ID(), ?, ?)";
 $stm = $conn->prepare($sql);
 
 $stm->bind_param("ss", $nome, $cognome);
-$stm->execute();
-
+$s = $stm->execute();
+if (!$) {
+    die($stm->error);
+}
 $conn->close();
 ?> 
