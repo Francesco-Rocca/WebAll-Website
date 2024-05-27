@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO Customers (c_type, email, password_hash, billing_address, registration_date, phone) VALUES ('I', ?, ?, ?, CURDATE(), ?)";
 $stm = $conn->prepare($sql);
 
-if (!isset($_POST["ragionsoc"])
+if (!isset($_POST["ragionesoc"])
       || !isset($_POST["indirizzo-sede"])
       || !isset($_POST["num-tel"])
       || !isset($_POST["email"])
@@ -27,7 +27,7 @@ if (!isset($_POST["ragionsoc"])
     header("location: ../registrazione/aziende.html");
 }
 
-$ragione_sociale = $_POST["ragionsoc"];
+$ragione_sociale = $_POST["ragionesoc"];
 $sede = $_POST["indirizzo-sede"];
 $numtel = $_POST["num-tel"];
 $email = $_POST["email"];
