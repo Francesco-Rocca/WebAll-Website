@@ -1,5 +1,5 @@
  <?php
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "root";
 $dbname = "weball";
@@ -11,6 +11,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+echo "<br>";
+print_r($conn->query("SELECT * FROM Customers")->fetch_assoc());
 
 $sql = "INSERT INTO Customers (c_type, email, password_hash, billing_address, registration_date, phone) VALUES ('I', ?, ?, ?, CURDATE(), ?)";
 $stm = $conn->prepare($sql);
