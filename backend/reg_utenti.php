@@ -4,6 +4,7 @@ $username = "root";
 $password = "root";
 $dbname = "weball";
 
+print_r($_POST);
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -22,7 +23,6 @@ $password = $_POST["password"];
 $password_conf = $_POST["password-conf"];
 $indirizzo = $_POST["indirizzo"];
 
-print_r($_POST);
 
 $stm->bind_param("ssss", $email, $password, $indirizzo, $numtel);
 $s = $stm->execute();
