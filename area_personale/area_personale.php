@@ -31,15 +31,15 @@ $customer = $stm->get_result()->fetch_assoc();
 print_r($_SESSION);
 print_r($customer);
 if ($customer["password_hash"] !== $_SESSION["password"]) {
-    // header("location: ../index.html");
+    header("location: ../index.html");
     exit();
 }
 
 function generaContenuto() {
-    $id = $GLOBALS["custoemr"]["id_customer"];
+    $id = $GLOBALS["customer"]["id_customer"];
     $conn = $GLOBALS["conn"];
 
-    if ($GLOBALS["customer "]["c_type"] == "O") {
+    if ($GLOBALS["customer"]["c_type"] == "O") {
         $sql = "SELECT * FROM InstitutionalCustomers WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
         $stm->bind_param("i", $id);
