@@ -29,7 +29,8 @@ $stm->execute();
 
 $customer = $stm->get_result()->fetch_assoc();
 
-if ($customer["password_hash"] != $_SESSION["password"]) {
+print_r($_SESSION);
+if ($customer["password_hash"] !== $_SESSION["password"]) {
     header("location: ../index.html");
     exit();
 }
