@@ -44,3 +44,9 @@ $stm = $conn->prepare($sql);
 
 $stm->bind_param("ss", $ragione_sociale, $sede);
 $s = $stm->execute();
+
+session_start();
+$_SESSION["mail"] = $mail;
+$_SESSION["password"] = $password;
+
+header("location: ../area_personale/area_personale.php");
