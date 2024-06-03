@@ -47,13 +47,8 @@ $stm->bind_param("ss", $ragione_sociale, $sede);
 $s = $stm->execute();
 
 session_start();
-$_SESSION["mail"] = $mail;
+$_SESSION["mail"] = $email;
 $_SESSION["password"] = $password;
 
-if (session_status() == PHP_SESSION_ACTIVE) {
-    print_r($_SESSION);
-    exit();
-}
-
-// header("location: ../area_personale/area_personale.php");
+header("location: ../area_personale/area_personale.php");
 ob_end_clean();
