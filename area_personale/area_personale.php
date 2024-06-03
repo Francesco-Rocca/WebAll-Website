@@ -32,8 +32,7 @@ if ($customer["password_hash"] !== $_SESSION["password"]) {
     header("location: ../index.html");
     exit();
 }
-print_r($customer);
-exit();
+
 function generaContenuto() {
     $id = $GLOBALS["customer"]["id_customer"];
     $conn = $GLOBALS["conn"];
