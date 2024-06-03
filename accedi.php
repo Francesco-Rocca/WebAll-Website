@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (session_status() == PHP_SESSION_ACTIVE && $_SESSION["email"]) {
+    header("location: backend/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
