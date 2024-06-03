@@ -37,7 +37,7 @@ function generaContenuto() {
     $id = $GLOBALS["customer"]["id_customer"];
     $conn = $GLOBALS["conn"];
 
-    if ($GLOBALS["customer"]["c_type"] === "O") {
+    if ($GLOBALS["customer"]["c_type"] === 'O') {
         $sql = "SELECT * FROM InstitutionalCustomers WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
         $stm->bind_param("i", $id);
