@@ -51,7 +51,7 @@ $_SESSION["mail"] = $mail;
 $_SESSION["password"] = $password;
 
 session_start();
-$_SESSION["mail"] = $mail;
+$_SESSION["email"] = $email;
 $_SESSION["password"] = $password;
 
 header("location: ../area_personale/area_personale.php");
