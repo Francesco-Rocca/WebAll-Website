@@ -50,7 +50,7 @@ session_start();
 $_SESSION["mail"] = $mail;
 $_SESSION["password"] = $password;
 
-if (session_start() == PHP_SESSION_ACTIVE) {
+if (session_status() == PHP_SESSION_ACTIVE) {
     print_r($_SESSION);
     exit();
 }
