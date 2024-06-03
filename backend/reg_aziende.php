@@ -50,5 +50,10 @@ session_start();
 $_SESSION["mail"] = $mail;
 $_SESSION["password"] = $password;
 
-header("location: ../area_personale/area_personale.php");
+if (session_start() != PHP_SESSION_ACTIVE) {
+    print_r($_SESSION);
+    exit();
+}
+
+// header("location: ../area_personale/area_personale.php");
 ob_end_clean();
