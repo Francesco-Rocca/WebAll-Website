@@ -47,7 +47,7 @@ $stm->bind_param("ss", $nome, $cognome);
 $s = $stm->execute();
 
 session_start();
-$_SESSION["mail"] = $mail;
+$_SESSION["email"] = $mail;
 $_SESSION["password"] = $password;
 
 session_start();

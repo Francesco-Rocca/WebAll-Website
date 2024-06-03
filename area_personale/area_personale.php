@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["mail"]) {
+if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["email"]) {
     header("location: ../accedi.html");
     ob_end_clean();
     exit();
