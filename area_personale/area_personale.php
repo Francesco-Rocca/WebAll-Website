@@ -1,5 +1,4 @@
 <?php
-ob_start();
 session_start();
 
 if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["email"]) {
@@ -50,7 +49,6 @@ function generaContenuto() {
         $r = $stm->get_result()->fetch_assoc();
         echo "Ragione sociale: " . $r["name"];
 
-        ob_end_clean();
         return;
     }
 
@@ -63,7 +61,6 @@ function generaContenuto() {
     $r = $stm->get_result()->fetch_assoc();
     echo "Nome: " . $r["first_name"] . " <br>";
     echo "Cognome: " . $r["last_name"];
-    ob_end_clean();
 }
 ?>
 
