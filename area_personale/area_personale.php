@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 
 if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["mail"]) {
@@ -61,6 +62,7 @@ function generaContenuto() {
     echo "Nome: " . $r["first_name"] . " <br>";
     echo "Cognome: " . $r["last_name"];
 }
+ob_get_clean();
 ?>
 
 <html>

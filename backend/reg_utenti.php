@@ -1,4 +1,5 @@
- <?php
+<?php
+ob_start();
 ini_set('display_errors', 1);
 error_reporting(E_ALL | E_STRICT);
 
@@ -54,3 +55,4 @@ $_SESSION["mail"] = $mail;
 $_SESSION["password"] = $password;
 
 header("location: ../area_personale/area_personale.php");
+ob_get_clean();
