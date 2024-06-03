@@ -80,10 +80,16 @@ function generaContenuto() {
           <!-- <a href="../siamo.html">Chi siamo</a>
           <a href="../accedi.html">Accedi</a> -->
         </div>
-        <button class="join-button">Logout</button>
+        <button class="join-button" onclick="logout()">Logout</button>
       </div>
     </nav>
 
     <?php generaContenuto(); ?>
+
+    <script>
+        function logout() {
+            window.location = "../backend/logout.php";
+        }
+    </script>
 </body>
 </html>
