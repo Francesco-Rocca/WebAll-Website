@@ -2,7 +2,7 @@
 session_start();
 
 if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["email"]) {
-    header("location: ../accedi.html");
+    header("location: ../accedi.php");
     ob_end_clean();
     exit();
 }
@@ -78,7 +78,7 @@ function generaContenuto() {
           <a href="agg_dominio.php">Dominii</a>
           <a href="pagamenti.php">Pagamenti</a>
           <!-- <a href="../siamo.html">Chi siamo</a>
-          <a href="../accedi.html">Accedi</a> -->
+          <a href="../accedi.php">Accedi</a> -->
         </div>
         <button class="join-button" onclick="logout()">Logout</button>
       </div>

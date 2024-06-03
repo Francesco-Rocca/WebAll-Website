@@ -24,7 +24,7 @@ if (session_status() == PHP_SESSION_ACTIVE && $_SESSION["email"]) {
           <a href="index.html">Home</a>
           <a href="documentazione.html">Documentazione</a>
           <a href="siamo.html">Chi siamo</a>
-          <a href="accedi.html"disabled>Accedi</a>
+          <a href="accedi.php"disabled>Accedi</a>
         </div>
         <button class="join-button" onclick="openPage()">Utilizza anche tu WebAll</button>
       </div>
