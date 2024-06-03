@@ -1,7 +1,6 @@
 <?php
 ob_start();
-$_SESSION["email"] = null;
-$_SESSION["password"] = null;
-session_destroy();
+unset($_SESSION["email"]);
+unset($_SESSION["password"]);
 header("location: ../index.html");
 ob_end_clean();
