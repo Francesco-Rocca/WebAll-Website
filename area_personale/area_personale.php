@@ -3,11 +3,10 @@ ob_start();
 session_start();
 
 if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["mail"]) {
-    header("location: ../login.html");
+    header("location: ../accedi.html");
+    ob_get_clean();
     exit();
 }
-
-// check user password
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL | E_STRICT);
@@ -49,6 +48,7 @@ function generaContenuto() {
         $r = $stm->get_result()->fetch_assoc();
         echo "Ragione sociale: " . $r["name"];
 
+        ob_get_clean();
         return;
     }
 
@@ -61,8 +61,8 @@ function generaContenuto() {
     $r = $stm->get_result()->fetch_assoc();
     echo "Nome: " . $r["first_name"] . " <br>";
     echo "Cognome: " . $r["last_name"];
+    ob_get_clean();
 }
-ob_get_clean();
 ?>
 
 <html>
