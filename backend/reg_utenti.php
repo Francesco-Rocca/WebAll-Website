@@ -55,4 +55,4 @@ $_SESSION["mail"] = $mail;
 $_SESSION["password"] = $password;
 
 header("location: ../area_personale/area_personale.php");
-ob_get_clean();
+ob_end_clean();
