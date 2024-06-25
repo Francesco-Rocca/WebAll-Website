@@ -1,13 +1,11 @@
 <?php
-ob_start();
 session_start();
 
-if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["mail"]) {
-    header("location: ../login.html");
+if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["email"]) {
+    header("location: ../accedi.php");
+    ob_end_clean();
     exit();
 }
-
-// check user password
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL | E_STRICT);
@@ -30,16 +28,16 @@ $stm->execute();
 
 $customer = $stm->get_result()->fetch_assoc();
 
-if ($customer["password_hash"] != $_SESSION["password"]) {
+if ($customer["password_hash"] !== $_SESSION["password"]) {
     header("location: ../index.html");
     exit();
 }
 
 function generaContenuto() {
-    $id = $GLOBALS["custoemr"]["id_customer"];
+    $id = $GLOBALS["customer"]["id_customer"];
     $conn = $GLOBALS["conn"];
 
-    if ($GLOBALS["customer "]["c_type"] == "O") {
+    if ($GLOBALS["customer"]["c_type"] === 'O') {
         $sql = "SELECT * FROM InstitutionalCustomers WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
         $stm->bind_param("i", $id);
@@ -62,7 +60,6 @@ function generaContenuto() {
     echo "Nome: " . $r["first_name"] . " <br>";
     echo "Cognome: " . $r["last_name"];
 }
-ob_get_clean();
 ?>
 
 <html>
@@ -81,12 +78,18 @@ ob_get_clean();
           <a href="lista_dominii.php">Dominii</a>
           <a href="lista_pagamenti.php">Pagamenti</a>
           <!-- <a href="../siamo.html">Chi siamo</a>
-          <a href="../accedi.html">Accedi</a> -->
+          <a href="../accedi.php">Accedi</a> -->
         </div>
-        <button class="join-button">Logout</button>
+        <button class="join-button" onclick="logout()">Logout</button>
       </div>
     </nav>
 
     <?php generaContenuto(); ?>
+
+    <script>
+        function logout() {
+            window.location = "../backend/logout.php";
+        }
+    </script>
 </body>
 </html>

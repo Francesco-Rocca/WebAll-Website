@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (session_status() == PHP_SESSION_ACTIVE && $_SESSION["email"]) {
+    header("location: backend/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +24,7 @@
           <a href="index.html">Home</a>
           <a href="documentazione.html">Documentazione</a>
           <a href="siamo.html">Chi siamo</a>
-          <a href="accedi.html"disabled>Accedi</a>
+          <a href="accedi.php"disabled>Accedi</a>
         </div>
         <button class="join-button" onclick="openPage()">Utilizza anche tu WebAll</button>
       </div>
@@ -23,7 +32,7 @@
     
     <div class="login-container">
         <h1 class="login-title">WebAll Login</h1>
-        <form action="/login" method="post">
+        <form action="/backend/login.php" method="post">
             <input type="email" class="textconteiner" name="email" placeholder="Email utente" required><br><br>
             <input type="password"  class="textconteiner" name="password" placeholder="Password" required><br><br>
             <button id="submitButton" type="submit">Accedi</button>

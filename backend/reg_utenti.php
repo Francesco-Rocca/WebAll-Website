@@ -47,12 +47,12 @@ $stm->bind_param("ss", $nome, $cognome);
 $s = $stm->execute();
 
 session_start();
-$_SESSION["mail"] = $mail;
+$_SESSION["email"] = $mail;
 $_SESSION["password"] = $password;
 
 session_start();
-$_SESSION["mail"] = $mail;
+$_SESSION["email"] = $email;
 $_SESSION["password"] = $password;
 
 header("location: ../area_personale/area_personale.php");
-ob_get_clean();
+ob_end_clean();
