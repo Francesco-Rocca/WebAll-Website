@@ -78,8 +78,8 @@ ob_get_clean();
         <div class="container">
         <a href="#" class="logo"><img src="weball_logo.png" alt="Logo" /></a>
         <div class="nav-links">
-          <a href="agg_dominio.php">Dominii</a>
-          <a href="pagamenti.php">Pagamenti</a>
+          <a href="lista_dominii.php">Dominii</a>
+          <a href="lista_pagamenti.php">Pagamenti</a>
           <!-- <a href="../siamo.html">Chi siamo</a>
           <a href="../accedi.html">Accedi</a> -->
         </div>
