@@ -3,7 +3,6 @@ session_start();
 
 if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["email"]) {
     header("location: ../accedi.php");
-    ob_end_clean();
     exit();
 }
 
@@ -133,7 +132,7 @@ function generaValori() {
             <table>
                 
             </table>
-        <? } ?>
+        <?php } ?>
 
         <br>
         <input type="submit" class="join-button2" value="Aggiorna">
