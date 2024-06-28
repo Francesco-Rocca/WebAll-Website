@@ -265,10 +265,14 @@ table, th, tr, td {
   border-collapse: collapse;
 }
 
-tr {
+tr, th {
   min-height: 52px;
   height: 52px;
   min-width: 40vw;
+}
+
+th {
+    background-color: #240046;
 }
 
 table * {

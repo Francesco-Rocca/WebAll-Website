@@ -48,7 +48,14 @@ $r = $stm->get_result();
     <title>WebAll</title>
     <link rel="stylesheet" href="../style.css">
     <script src="http://52.47.171.54:8080/service/init.js"></script>
-
+    
+    <style>
+        table {
+            margin: auto;
+            width: max-content;
+            margin-top: 64px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
