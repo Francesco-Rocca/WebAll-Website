@@ -276,7 +276,7 @@ table * {
     font-weight: bold;
 }
 
-table .textconteiner {
+td .textconteiner {
   height: 100% !important;
   min-height: 100% !important;
   width: 100% !important;
