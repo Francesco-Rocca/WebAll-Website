@@ -50,7 +50,7 @@ $r = $stm->get_result();
     <script src="http://52.47.171.54:8080/service/init.js"></script>
     
     <style>
-        table {
+        div {
             margin: auto;
             width: max-content;
             margin-top: 64px;
@@ -71,24 +71,26 @@ $r = $stm->get_result();
       </div>
     </nav>
 
-    <table>
-        <tr>
-            <th>Dominio</th>
-            <th>Piano</th>
-            <th>Data di attivazione</th>
-            <th>Modifica</th>
-            <th>Elimina</t>
-        </>
-
-        <?php while ($row = $r->fetch_assoc()) { ?>
+    <div>
+        <table>
             <tr>
-                <td> <?php echo $row["domain"]; ?> </td>
-                <td> <?php echo $row["name"] ?> </td>
-                <td> <?php echo $row["activation_date"]; ?> </td>
-                <td><a href="../backend/updt_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
-                <td><a href="../backend/agg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
-            </tr>
-        <?php } ?>
-    </tabl>
+                <th>Dominio</th>
+                <th>Piano</th>
+                <th>Data di attivazione</th>
+                <th>Modifica</th>
+                <th>Elimina</t>
+        </tr>
+
+            <?php while ($row = $r->fetch_assoc()) { ?>
+                <tr>
+                    <td> <?php echo $row["domain"]; ?> </td>
+                    <td> <?php echo $row["name"] ?> </td>
+                    <td> <?php echo $row["activation_date"]; ?> </td>
+                    <td><a href="../backend/updt_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
+                    <td><a href="../backend/agg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
+                </tr>
+            <?php } ?>
+        </table>
+    </div>
 </body>
 </html>
