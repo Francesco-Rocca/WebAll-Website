@@ -58,8 +58,6 @@ function generaValori() {
     $r = $stm->get_result()->fetch_assoc();
     generaUtente($r);
 }
-
-generaValori();
 ?>
 
 <html>
@@ -83,6 +81,8 @@ generaValori();
         <button class="join-button" onclick="logout()">Logout</button>
       </div>
     </nav>
+
+    <?php generaValori(); ?>
 
     <form>
         <?php function generaAzienda($r) { ?>
