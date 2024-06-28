@@ -265,7 +265,7 @@ table, th, tr, td {
   border-collapse: collapse;
 }
 
-tr, th {
+tr {
   min-height: 52px;
   height: 52px;
   min-width: 40vw;
@@ -287,7 +287,7 @@ td .textcontainer {
   min-width: 100% !important;
 }
 
-td {
+td, th {
   vertical-align: middle;
   min-height: 52px;
   height: 52px;
