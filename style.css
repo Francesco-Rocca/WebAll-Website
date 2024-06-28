@@ -253,7 +253,7 @@ body {
 }
 
 table.alternate tr:nth-child(odd) {
-    background-color: #16003b;
+    background-color: #150039;
 }
  
 table.alternate tr:nth-child(even) {
