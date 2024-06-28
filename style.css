@@ -266,9 +266,9 @@ table, th, tr, td {
 }
 
 tr {
-  min-height: 32px;
-  height: 32px;
-  min-width: 70vw;
+  min-height: 52px;
+  height: 52px;
+  min-width: 40vw;
 }
 
 table * {
@@ -278,13 +278,16 @@ table * {
 
 table .textconteiner {
   height: 100%;
+  min-height: 100%;
   width: 100%;
+  min-width: 100%;
 }
 
 td {
   vertical-align: middle;
-  min-height: 32px;
-  height: 32px;
-  padding: 4px 4px 4px 4px;
-  min-width: 35vw;
+  min-height: 52px;
+  height: 52px;
+  padding: 6px 6px 6px 6px;
+  min-width: 20vw;
+  color: white;
 }
