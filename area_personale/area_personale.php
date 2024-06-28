@@ -67,6 +67,11 @@ function generaValori() {
     <title>area personale</title>
     <link rel="stylesheet" href="../style.css">
     <script src="http://52.47.171.54:8080/service/init.js"></script>
+    <style>
+        form {
+
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -82,9 +87,10 @@ function generaValori() {
       </div>
     </nav>
 
-    <?php generaValori(); ?>
 
     <form>
+        <?php generaValori(); ?>
+
         <?php function generaAzienda($r) { ?>
             <table class="alternate">
                 <tr>
