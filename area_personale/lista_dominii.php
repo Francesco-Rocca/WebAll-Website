@@ -50,9 +50,9 @@ $r = $stm->get_result();
     <script src="http://52.47.171.54:8080/service/init.js"></script>
     
     <style>
-        div {
+        .center {
             margin: auto;
-            width: max-content;
+            width: 40vw;
             margin-top: 64px;
         }
     </style>
@@ -71,7 +71,7 @@ $r = $stm->get_result();
       </div>
     </nav>
 
-    <div>
+    <div class="center">
         <table>
             <tr>
                 <th>Dominio</th>
