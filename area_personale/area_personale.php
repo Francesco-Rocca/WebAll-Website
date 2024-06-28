@@ -78,7 +78,7 @@ function generaValori() {
 <body>
     <nav class="navbar">
         <div class="container">
-        <a href="#" class="logo"><img src="weball_logo.png" alt="Logo" /></a>
+        <a href="#" class="logo"><img src="../weball_logo.png" alt="Logo" /></a>
         <div class="nav-links">
           <a href="lista_dominii.php">Dominii</a>
           <a href="lista_pagamenti.php">Pagamenti</a>
