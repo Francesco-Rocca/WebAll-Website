@@ -71,6 +71,7 @@ function generaValori() {
         form {
             margin: auto;
             width: max-content;
+            margin-top: 64px;
         }
     </style>
 </head>
