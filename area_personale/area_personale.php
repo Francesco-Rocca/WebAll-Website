@@ -69,7 +69,8 @@ function generaValori() {
     <script src="http://52.47.171.54:8080/service/init.js"></script>
     <style>
         form {
-
+            margin: auto;
+            width: max-content;
         }
     </style>
 </head>
