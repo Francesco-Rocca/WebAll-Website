@@ -86,7 +86,7 @@ function generaValori() {
 
     <form>
         <?php function generaAzienda($r) { ?>
-            <table>
+            <table class="alternate">
                 <tr>
                     <td>Ragione Sociale</td>
                     <td> <input type="text" class="textcontainer" name="name" value=<?php echo "\"" . $r["name"] . "\""; ?>> </td>
@@ -119,7 +119,7 @@ function generaValori() {
         <?php } ?>
 
         <?php function generaUtente($r) { ?>
-            <table>
+            <table class="alternate">
                 
             </table>
         <?php } ?>
