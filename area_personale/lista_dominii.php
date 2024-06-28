@@ -76,7 +76,7 @@ $r = $stm->get_result();
     </nav>
 
     <div class="center">
-        <table>
+        <table class="alternate">
             <tr>
                 <th>Dominio</th>
                 <th>Piano</th>
@@ -95,6 +95,8 @@ $r = $stm->get_result();
                 </tr>
             <?php } ?>
         </table>
+
+        <input type="button" class="join-button2" value="Aggiundi dominio">
     </div>
 </body>
 </html>
