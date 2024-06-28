@@ -55,6 +55,10 @@ $r = $stm->get_result();
             width: 40vw;
             margin-top: 64px;
         }
+
+        th, td {
+            min-width: 10vw;
+        }
     </style>
 </head>
 <body>

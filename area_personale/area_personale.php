@@ -73,6 +73,10 @@ function generaValori() {
             width: max-content;
             margin-top: 64px;
         }
+
+        th, td {
+            min-width: 20vw;
+        }
     </style>
 </head>
 <body>

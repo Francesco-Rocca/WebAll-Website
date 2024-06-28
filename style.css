@@ -292,7 +292,6 @@ td, th {
   vertical-align: middle;
   min-height: 52px;
   height: 52px;
-  padding: 6px 6px 6px 16px;
-  min-width: 20vw;
+  padding: 6px 16px 6px 16px;
   color: white;
 }
