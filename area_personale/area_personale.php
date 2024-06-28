@@ -33,7 +33,7 @@ if ($customer["password_hash"] !== $_SESSION["password"]) {
     exit();
 }
 
-function generaContenuto() {
+function generaValori() {
     $id = $GLOBALS["customer"]["id_customer"];
     $conn = $GLOBALS["conn"];
 
@@ -45,7 +45,7 @@ function generaContenuto() {
         $stm->execute();
 
         $r = $stm->get_result()->fetch_assoc();
-        echo "Ragione sociale: " . $r["name"];
+        generaAzienda($r);
 
         return;
     }
@@ -57,8 +57,7 @@ function generaContenuto() {
     $stm->execute();
 
     $r = $stm->get_result()->fetch_assoc();
-    echo "Nome: " . $r["first_name"] . " <br>";
-    echo "Cognome: " . $r["last_name"];
+    generaUtente($r);
 }
 ?>
 
@@ -69,8 +68,20 @@ function generaContenuto() {
     <title>area personale</title>
     <link rel="stylesheet" href="../style.css">
     <script src="http://52.47.171.54:8080/service/init.js"></script>
+    <style>
+        html {
+            display: table;
+        }
+
+        body {
+            display: table-cell;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+    </style>
 </head>
-<>
+<body>
     <nav class="navbar">
         <div class="container">
         <a href="#" class="logo"><img src="weball_logo.png" alt="Logo" /></a>
@@ -84,7 +95,50 @@ function generaContenuto() {
       </div>
     </nav>
 
-    <?php generaContenuto(); ?>
+    <form>
+        <?php function generaAzienda($r) { ?>
+            <table>
+                <tr>
+                    <td>Ragione Sociale</td>
+                    <td> <input type="text" class="textcontainer" name="name" value=<?php echo "\"" . $r["name"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Indirizzo E-Mail</td>
+                    <td> <input type="text" name="email" value=<?php echo "\"" . $r["email"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Indirizzo di fatturazione</td>
+                    <td> <input type="text" name="billing_address" value=<?php echo "\"" . $r["billing_address"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Sede legale</td>
+                    <td> <input type="text" name="hq_address" value=<?php echo "\"" . $r["billing_address"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Numero di telefono</td>
+                    <td> <input type="tel" name="phone" value=<?php echo "\"" . $r["phone"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Data di registrazione</td>
+                    <td> <?php echo $r["registration_date"]; ?> </td>
+                </tr>
+                <tr>
+                    <td>Codice utente</td>
+                    <td> <?php echo $r["id_customer"]; ?> </td>
+                </tr>
+            </table>
+        <?php } ?>
+
+        <?php function generaUtente($r) { ?>
+            <table>
+                
+            </table>
+        <? } ?>
+
+        <br>
+        <input type="submit" class="join-button2" value="Aggiorna">
+        <input type="button" class="join-button2" value="Cambia password">
+    </form>
 
     <script>
         function logout() {
