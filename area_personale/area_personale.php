@@ -93,19 +93,19 @@ function generaValori() {
                 </tr>
                 <tr>
                     <td>Indirizzo E-Mail</td>
-                    <td> <input type="text" name="email" value=<?php echo "\"" . $r["email"] . "\""; ?>> </td>
+                    <td> <input type="text" class="textcontainer" name="email" value=<?php echo "\"" . $r["email"] . "\""; ?>> </td>
                 </tr>
                 <tr>
                     <td>Indirizzo di fatturazione</td>
-                    <td> <input type="text" name="billing_address" value=<?php echo "\"" . $r["billing_address"] . "\""; ?>> </td>
+                    <td> <input type="text" class="textcontainer" name="billing_address" value=<?php echo "\"" . $r["billing_address"] . "\""; ?>> </td>
                 </tr>
                 <tr>
                     <td>Sede legale</td>
-                    <td> <input type="text" name="hq_address" value=<?php echo "\"" . $r["billing_address"] . "\""; ?>> </td>
+                    <td> <input type="text" class="textcontainer" name="hq_address" value=<?php echo "\"" . $r["billing_address"] . "\""; ?>> </td>
                 </tr>
                 <tr>
                     <td>Numero di telefono</td>
-                    <td> <input type="tel" name="phone" value=<?php echo "\"" . $r["phone"] . "\""; ?>> </td>
+                    <td> <input type="tel" class="textcontainer" name="phone" value=<?php echo "\"" . $r["phone"] . "\""; ?>> </td>
                 </tr>
                 <tr>
                     <td>Data di registrazione</td>
