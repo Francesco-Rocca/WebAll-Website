@@ -253,7 +253,7 @@ body {
 }
 
 table.alternate tr:nth-child(odd) {
-    background-color: #10002b;
+    background-color: #150039;
 }
  
 table.alternate tr:nth-child(even) {
@@ -268,10 +268,23 @@ table, th, tr, td {
 tr {
   min-height: 32px;
   height: 32px;
+  min-width: 70vw;
+}
+
+table * {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+table .textconteiner {
+  height: 100%;
+  width: 100%;
 }
 
 td {
   vertical-align: middle;
   min-height: 32px;
   height: 32px;
+  padding: 4px 4px 4px 4px;
+  min-width: 35vw;
 }
