@@ -268,7 +268,8 @@ table, th, tr, td {
 tr {
   min-height: 52px;
   height: 52px;
-  min-width: 40vw;
+  min-width: 40%;
+  width: 40%;
 }
 
 th {
