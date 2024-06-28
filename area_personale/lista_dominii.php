@@ -72,13 +72,13 @@ $r = $stm->get_result();
     </nav>
 
     <table>
-        <th>
-            <td>Dominio</td>
-            <td>Piano</td>
-            <td>Data di attivazione</td>
-            <td>Modifica</td>
-            <td>Elimina</td>
-        </th>       
+        <tr>
+            <th>Dominio</th>
+            <th>Piano</th>
+            <th>Data di attivazione</th>
+            <th>Modifica</th>
+            <th>Elimina</t>
+        </>
 
         <?php while ($row = $r->fetch_assoc()) { ?>
             <tr>
