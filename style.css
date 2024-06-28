@@ -145,7 +145,7 @@ body {
   margin-left: 20%;
 }
 
-.textconteiner{
+.textcontainer{
     padding-left: 8px;  
     height: 30px;
     width: 500px;
@@ -155,7 +155,7 @@ body {
     border: #fff;
 }
 
-.textconteiner:hover{
+.textcontainer:hover{
     box-shadow: 0 0 13px #ffffff;
     border-color: #ffffff;
 }
@@ -276,7 +276,7 @@ table * {
     font-weight: bold;
 }
 
-td .textconteiner {
+td .textcontainer {
   height: 100% !important;
   min-height: 100% !important;
   width: 100% !important;

@@ -33,8 +33,8 @@ if (session_status() == PHP_SESSION_ACTIVE && $_SESSION["email"]) {
     <div class="login-container">
         <h1 class="login-title">WebAll Login</h1>
         <form action="/backend/login.php" method="post">
-            <input type="email" class="textconteiner" name="email" placeholder="Email utente" required><br><br>
-            <input type="password"  class="textconteiner" name="password" placeholder="Password" required><br><br>
+            <input type="email" class="textcontainer" name="email" placeholder="Email utente" required><br><br>
+            <input type="password"  class="textcontainer" name="password" placeholder="Password" required><br><br>
             <button id="submitButton" type="submit">Accedi</button>
         </form>
     </div>
