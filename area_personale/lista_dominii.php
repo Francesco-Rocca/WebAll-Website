@@ -59,6 +59,15 @@ $r = $stm->get_result();
         th, td {
             min-width: 8vw;
         }
+
+        table.alternate tr:nth-child(even) {
+            background-color: #150039;
+        }
+        
+        table.alternate tr:nth-child(odd) {
+            background-color: #240046;
+        }
+
     </style>
 </head>
 <body>

@@ -77,6 +77,14 @@ function generaValori() {
         th, td {
             min-width: 20vw;
         }
+
+        table.alternate tr:nth-child(odd) {
+            background-color: #150039;
+        }
+        
+        table.alternate tr:nth-child(even) {
+            background-color: #240046;
+        }
     </style>
 </head>
 <body>

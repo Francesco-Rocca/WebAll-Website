@@ -252,14 +252,6 @@ body {
     height: auto;
 }
 
-table.alternate tr:nth-child(odd) {
-    background-color: #150039;
-}
- 
-table.alternate tr:nth-child(even) {
-    background-color: #240046;
-}
-
 table, th, tr, td {
   border: none;
   border-collapse: collapse;
