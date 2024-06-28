@@ -58,6 +58,8 @@ function generaValori() {
     $r = $stm->get_result()->fetch_assoc();
     generaUtente($r);
 }
+
+generaValori();
 ?>
 
 <html>
