@@ -57,7 +57,7 @@ $r = $stm->get_result();
         }
 
         th, td {
-            min-width: 10vw;
+            min-width: 8vw;
         }
     </style>
 </head>
