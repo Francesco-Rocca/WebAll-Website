@@ -67,18 +67,6 @@ function generaValori() {
     <title>area personale</title>
     <link rel="stylesheet" href="../style.css">
     <script src="http://52.47.171.54:8080/service/init.js"></script>
-    <style>
-        html {
-            display: table;
-        }
-
-        body {
-            display: table-cell;
-            align-items: center;
-            justify-content: center;
-            align-content: center;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
