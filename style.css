@@ -260,16 +260,18 @@ table.alternate tr:nth-child(even) {
     background-color: #240046;
 }
 
-table th tr td {
+table, th, tr, td {
   border: none;
   border-collapse: collapse;
 }
 
 tr {
-  height: 24px;
+  min-height: 32px;
+  height: 32px;
 }
 
 td {
   vertical-align: middle;
-  height: 24px;
+  min-height: 32px;
+  height: 32px;
 }
