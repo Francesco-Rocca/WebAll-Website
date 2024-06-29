@@ -304,7 +304,23 @@ td, th {
   border-radius: 8px;
 }
 
-.error * {
+.error *, .success * {
   padding: 16px 16px 16px 16px;
   margin: 0;
+}
+
+.success {
+  background-color: #2ea44f;
+  margin: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: none;
+  height: 52px;
+  filter: brightness(110%);
+  vertical-align: middle;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
 }

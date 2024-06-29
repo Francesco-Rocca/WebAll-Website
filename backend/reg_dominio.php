@@ -45,3 +45,5 @@ try {
 } catch (Exception $e) {
     header("location: ../area_personale/reg_dominio.php?error=true");
 }
+
+header("location: ../area_personale/lista_dominii.php?success=true");

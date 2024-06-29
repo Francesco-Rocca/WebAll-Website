@@ -219,7 +219,7 @@ $r = $stm->get_result();
                     <td> <?php echo number_format((float)$row["price_due"], 2, '.', ''); ?> € / <?php echo number_format((float)$row["price_ceiling"], 2, '.', ''); ?> € </td>
                     <td align="center">
                         <a class="button-3" href="reg_dominio.php?edit=<?php echo $row["id_subscription"]; ?>">Modifica</a>
-                        <input type="button" class="delete" onclick="<?php echo "deldom(" . $row["id_subscription"] . ")"; ?>">Elimina</>
+                        <input type="button" class="delete" onclick="<?php echo "deldom(" . $row["id_subscription"] . ")"; ?>" value="Elimina">
                     </td>
                 </tr>
             <?php } ?>
@@ -228,6 +228,12 @@ $r = $stm->get_result();
         <?php if (isset($_GET["error"])) { ?>
             <div class="error">
                 <p>Ops... Si è verificato un errore</p>
+            </div>
+        <?php } ?>
+
+        <?php if (isset($_GET["success"])) { ?>
+            <div class="success">
+                <p>Fatto! Operazione completta con successo</p>
             </div>
         <?php } ?>
 
