@@ -291,7 +291,6 @@ td, th {
 .error {
   margin: auto;
   margin-top: 24px;
-  margin-bottom: 24px;
   border: none;
   background-color: #EE4B2B;
   height: 52px;
@@ -313,7 +312,6 @@ td, th {
   background-color: #2ea44f;
   margin: auto;
   margin-top: 24px;
-  margin-bottom: 24px;
   border: none;
   height: 52px;
   filter: brightness(110%);
