@@ -162,6 +162,12 @@ $r = $stm->get_result();
 
 
     </style>
+
+    <script>
+        function aggdom() {
+            window.location = 'reg_dominio.php'
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -198,7 +204,7 @@ $r = $stm->get_result();
             <?php } ?>
         </table>
 
-        <a href="reg_dominio.php" class="join-button2">Aggiungi dominio</a>
+        <input type="button" href="reg_dominio.php" class="join-button2" value="Aggiungi dominio" onclick="aggdom()">
     </div>
 </body>
 </html>
