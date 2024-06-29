@@ -198,8 +198,8 @@ $r = $stm->get_result();
                     <td> <?php echo $row["domain"]; ?> </td>
                     <td> <?php echo $row["name"]; ?> </td>
                     <td> <?php echo $row["activation_date"]; ?> </td>
-                    <td align="center"><a class="button-3" href="../backend/reg_dominio.php?edit=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
-                    <td align="center"><a class="delete" href="../backend/reg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
+                    <td align="center"><a class="button-3" href="reg_dominio.php?edit=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
+                    <td align="center"><a class="delete" href="reg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
                 </tr>
             <?php } ?>
         </table>

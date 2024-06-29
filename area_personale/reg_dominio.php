@@ -44,30 +44,30 @@ $pc = 100;
 $did = "../backend/reg_dominio.php";
 $btn = "Aggiungi";
 
-// if (isset($_GET["edit"])) {
-//     $did = "../backend/agg_dominio.php?id=" . $_GET["edit"];
-//     $sql = "SELECT * FROM Subscriptions WHERE id_subscription = ?";
-//     $stm = $conn->prepare($sql);
-//     $stm->bind_param("i", $_GET["edit"]);
-//     $stm->execute();
+if (isset($_GET["edit"])) {
+    $did = "../backend/agg_dominio.php?id=" . $_GET["edit"];
+    $sql = "SELECT * FROM Subscriptions WHERE id_subscription = ?";
+    $stm = $conn->prepare($sql);
+    $stm->bind_param("i", $_GET["edit"]);
+    $stm->execute();
 
-//     $r = $stm->get_result();
-//     if (!$r) {
-//         header("location: ../index.html");
-//         exit();
-//     }
+    $r = $stm->get_result();
+    if (!$r) {
+        header("location: ../index.html");
+        exit();
+    }
 
-//     $r = $r->fetch_assoc();
-//     if ($r["id_customer"] != $customer["id_customer"]) {
-//         header("location: ../index.html");
-//         exit();
-//     }
+    $r = $r->fetch_assoc();
+    if ($r["id_customer"] != $customer["id_customer"]) {
+        header("location: ../index.html");
+        exit();
+    }
 
-//     $dom = $r["domain"];
-//     $plan = $r["id_plan"];
-//     $pc = $r["price_ceiling"];
-//     $btn = "Aggiorna";
-// }
+    $dom = $r["domain"];
+    $plan = $r["id_plan"];
+    $pc = $r["price_ceiling"];
+    $btn = "Aggiorna";
+}
 
 function sel($r) {
     if ($GLOBALS["plan"] == $r["id_plan"]) {
