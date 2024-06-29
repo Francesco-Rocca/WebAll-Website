@@ -299,15 +299,11 @@ td, th {
   vertical-align: middle;
   font-family: Arial, sans-serif;
   color: white;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .error * {
-  font-size: 16px;
-  margin: 0;
+  margin: 16px 16px 16px 16px;
   padding: 0;
 }
