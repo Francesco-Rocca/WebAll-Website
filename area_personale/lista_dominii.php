@@ -84,6 +84,7 @@ $r = $stm->get_result();
 
         .button-3 {
             filter: brightness(140%);
+            min-width: 100px;
             appearance: none;
             background-color: #2ea44f;
             border: 1px solid rgba(27, 31, 35, .15);
@@ -136,6 +137,7 @@ $r = $stm->get_result();
 
         .delete {
             filter: brightness(110%);
+            min-width: 100px;
             appearance: none;
             background-color: #EE4B2B;
             border: 1px solid rgba(27, 31, 35, .15);
