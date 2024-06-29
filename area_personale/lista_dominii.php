@@ -121,7 +121,7 @@ $r = $stm->get_result();
         }
 
         .delete {
-            filter: brightness(140%);
+            filter: brightness(110%);
             appearance: none;
             background-color: #EE4B2B;
             border: 1px solid rgba(27, 31, 35, .15);
@@ -192,8 +192,8 @@ $r = $stm->get_result();
                     <td> <?php echo $row["domain"]; ?> </td>
                     <td> <?php echo $row["name"] ?> </td>
                     <td> <?php echo $row["activation_date"]; ?> </td>
-                    <td><a class="button-3" href="../backend/updt_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
-                    <td><a class="delete" href="../backend/agg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
+                    <td align="center"><a class="button-3" href="../backend/updt_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
+                    <td align="center"><a class="delete" href="../backend/agg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
                 </tr>
             <?php } ?>
         </table>
