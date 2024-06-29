@@ -32,7 +32,7 @@ if ($customer["password_hash"] !== $_SESSION["password"]) {
     exit();
 }
 
-$sql = "SELECT a.*, b.name FROM Subscriptions a INNER JOIN Plans b ON a.id_plan = b.id_plan WHERE a.id_customer = ?";
+$sql = "SELECT a.*, b.name, b.max_hits, b.max_yearly_hits FROM Subscriptions a INNER JOIN Plans b ON a.id_plan = b.id_plan WHERE a.id_customer = ?";
 $stm = $conn->prepare($sql);
 $stm->bind_param("i", $customer["id_customer"]);
 $stm->execute();
@@ -54,6 +54,11 @@ $r = $stm->get_result();
             margin: auto;
             width: max-content;
             margin-top: 64px;
+        }
+
+        table {
+            min-width: 70vw;
+            width: 70vw;
         }
 
         th, td {
@@ -189,6 +194,9 @@ $r = $stm->get_result();
                 <th>Dominio</th>
                 <th>Piano</th>
                 <th>Data di attivazione</th>
+                <th>Hit</th>
+                <th>Hit annuali</th>
+                <th>Budget</th>
                 <th>Azioni</th>
         </tr>
 
@@ -197,6 +205,9 @@ $r = $stm->get_result();
                     <td> <?php echo $row["domain"]; ?> </td>
                     <td> <?php echo $row["name"]; ?> </td>
                     <td> <?php echo $row["activation_date"]; ?> </td>
+                    <td> <?php  echo $row["num_hits"]; ?> / <?php echo $row["max_hits"]; ?> </td>
+                    <td> <?php echo $row["num_yearly_hits"]; ?> / <?php echo $row["max_yearly_hits"]; ?> </td>
+                    <td> <?php echo number_format((float)$row["price_due"], 2, '.', ''); ?> € / <?php echo number_format((float)$row["price_ceiling"], 2, '.', ''); ?> € </td>
                     <td align="center">
                         <a class="button-3" href="reg_dominio.php?edit=<?php echo $row["id_subscription"]; ?>">Modifica</a>
                         <a class="delete" href="reg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a>
