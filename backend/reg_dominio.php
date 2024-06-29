@@ -34,10 +34,7 @@ if ($customer["password_hash"] !== $_SESSION["password"]) {
 
 $sql = "INSERT INTO Subscriptions (id_plan, id_customer, domain, activation_date, price_ceiling) VALUES (?, ?, ?, CURDATE(), ?)";
 $stm = $conn->prepare($sql);
-$stm->bind_param("i", $_POST["plan"]);
-$stm->bind_param("i", $customer["id_customer"]);
-$stm->bind_param("s", $_POST["domain"]);
-$stm->bind_param("i", $_POST["price_ceiling"]);
+$stm->bind_param("iisi", $_POST["plan"], $customer["id_customer"], $_POST["domain"], $_POST["price_ceiling"]);
 
 $r = $stm->execute();
 
