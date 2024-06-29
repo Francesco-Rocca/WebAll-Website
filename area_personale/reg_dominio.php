@@ -41,7 +41,7 @@ $plans = $stm->get_result();
 $dom = "";
 $plan = 1;
 $pc = "100";
-$did = "../backend/reg_dominio.php"
+$did = "../backend/reg_dominio.php";
 
 if (isset($_GET["edit"])) {
     $did = "../backend/agg_dominio.php?id=" . $_GET["edit"];
