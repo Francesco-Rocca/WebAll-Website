@@ -52,7 +52,7 @@ $r = $stm->get_result();
     <style>
         .center {
             margin: auto;
-            width: 40vw;
+            width: max-content;
             margin-top: 64px;
         }
 
