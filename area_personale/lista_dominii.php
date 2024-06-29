@@ -48,6 +48,15 @@ $r = $stm->get_result();
     <title>WebAll</title>
     <link rel="stylesheet" href="../style.css">
     <script src="http://52.47.171.54:8080/service/init.js"></script>
+
+    <script>
+        function deldom(d) {
+            const result = confirm("Want to delete?");
+            if (result) {
+                window.location = '../backend/del_dominio.php?id=' + d;
+            }
+        }
+    </script>
     
     <style>
         .center {
@@ -210,11 +219,17 @@ $r = $stm->get_result();
                     <td> <?php echo number_format((float)$row["price_due"], 2, '.', ''); ?> € / <?php echo number_format((float)$row["price_ceiling"], 2, '.', ''); ?> € </td>
                     <td align="center">
                         <a class="button-3" href="reg_dominio.php?edit=<?php echo $row["id_subscription"]; ?>">Modifica</a>
-                        <a class="delete" href="reg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a>
+                        <input type="button" class="delete" onclick="<?php echo "deldom(" . $row["id_subscription"] . ")"; ?>">Elimina</>
                     </td>
                 </tr>
             <?php } ?>
         </table>
+
+        <?php if (isset($_GET["error"])) { ?>
+            <div class="error">
+                <p>Ops... Si è verificato un errore</p>
+            </div>
+        <?php } ?>
 
         <input type="button" href="reg_dominio.php" class="join-button2" value="Aggiungi dominio" onclick="aggdom()">
     </div>
