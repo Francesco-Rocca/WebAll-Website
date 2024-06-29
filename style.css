@@ -301,6 +301,7 @@ td, th {
   color: white;
   font-weight: bold;
   font-size: 16px;
+  border-radius: 8px;
 }
 
 .error * {
