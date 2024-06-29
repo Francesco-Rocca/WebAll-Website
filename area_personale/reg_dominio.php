@@ -1,4 +1,4 @@
-<?php
+<p?php
 session_start();
 
 if (session_status() != PHP_SESSION_ACTIVE || !$_SESSION["email"]) {
@@ -146,8 +146,8 @@ function sel($r) {
         </table>
 
         <?php if (isset($_GET["error"])) { ?>
-            <div class="error">
-                Il dominio specificato è già registrato o i valori inseriti non sono validi
+            < class="error">
+                <p>Il dominio specificato è già registrato o i valori inseriti non sono validi</p>
             </div>
         <?php } ?>
 
