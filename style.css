@@ -287,3 +287,16 @@ td, th {
   padding: 6px 16px 6px 16px;
   color: white;
 }
+
+.error {
+  margin: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: none;
+  background-color: #EE4B2B;
+  height: 52px;
+  filter: brightness(110%);
+  vertical-align: middle;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}

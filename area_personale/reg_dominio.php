@@ -145,6 +145,12 @@ function sel($r) {
             </tr>
         </table>
 
+        <?php if (isset($_GET["error"])) { ?>
+            <div class="error">
+                Il dominio specificato è già registrato o i valori inseriti non sono validi
+            </div>
+        <?php } ?>
+
         <input type="submit" class="join-button2" value="<?php echo $btn; ?>">
     </form>
 </body>

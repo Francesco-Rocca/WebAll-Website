@@ -36,8 +36,12 @@ $sql = "INSERT INTO Subscriptions (id_plan, id_customer, domain, activation_date
 $stm = $conn->prepare($sql);
 $stm->bind_param("iisi", $_POST["plan"], $customer["id_customer"], $_POST["domain"], $_POST["price_ceiling"]);
 
-$r = $stm->execute();
+try {
+    $r = $stm->execute();
 
-if ($r) {
-    header("location: ../area_personale/lista_dominii.php");
+    if ($r) {
+        header("location: ../area_personale/lista_dominii.php");
+    }
+} catch (Exception $e) {
+    header("location: ../area_personale/reg_dominio.php?error=true");
 }
