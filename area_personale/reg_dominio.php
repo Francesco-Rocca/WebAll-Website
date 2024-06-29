@@ -40,7 +40,7 @@ $plans = $stm->get_result();
 
 $dom = "";
 $plan = 1;
-$pc = "100";
+$pc = 100;
 $did = "../backend/reg_dominio.php";
 $btn = "Aggiungi";
 
