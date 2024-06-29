@@ -125,7 +125,8 @@ function generaValori() {
                 </tr>
                 <tr>
                     <td>Numero di telefono</td>
-                    <td> <input type="tel" class="textcontainer" name="phone" value=<?php echo "\"" . $r["phone"] . "\""; ?>> </td>
+                    <td> <input type="tel" pattern="+[0-9]{1,3} [0-9]{3} [0-9]{3} 
+ [0-9]{4}"class="textcontainer" name="phone" value=<?php echo "\"" . $r["phone"] . "\""; ?>> </td>
                 </tr>
                 <tr>
                     <td>Data di registrazione</td>

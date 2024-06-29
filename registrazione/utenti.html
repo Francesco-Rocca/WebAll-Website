@@ -29,7 +29,8 @@
             <input type="password"  class="textcontainer" name="password-conf" placeholder="Conferma password" required><br><br>
             <input type="text"  class="textcontainer" name="nome" placeholder="Nome" required><br><br>
             <input type="text"  class="textcontainer" name="cognome" placeholder="Cognome" required><br><br>
-            <input type="tel"  class="textcontainer" name="num-tel" placeholder="Numero felefono" required><br><br>
+            <input type="tel" pattern="+[0-9]{1,3} [0-9]{3} [0-9]{3} 
+ [0-9]{4}" class="textcontainer" name="num-tel" placeholder="Numero felefono" required><br><br>
             <input type="text"  class="textcontainer" name="indirizzo" placeholder="Indirizzo fatturazione" required><br><br>
             <button id="submitButton" type="submit">Registrati</button>
         </form>
