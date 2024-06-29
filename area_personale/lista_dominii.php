@@ -190,15 +190,15 @@ $r = $stm->get_result();
             <?php while ($row = $r->fetch_assoc()) { ?>
                 <tr>
                     <td> <?php echo $row["domain"]; ?> </td>
-                    <td> <?php echo $row["name"] ?> </td>
+                    <td> <?php echo $row["name"]; ?> </td>
                     <td> <?php echo $row["activation_date"]; ?> </td>
-                    <td align="center"><a class="button-3" href="../backend/updt_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
-                    <td align="center"><a class="delete" href="../backend/agg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
+                    <td align="center"><a class="button-3" href="../backend/agg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
+                    <td align="center"><a class="delete" href="../backend/reg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
                 </tr>
             <?php } ?>
         </table>
 
-        <input type="button" class="join-button2" value="Aggiundi dominio">
+        <a href="reg_dominio.php" class="join-button2" value="Aggiundi dominio">
     </div>
 </body>
 </html>

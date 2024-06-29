@@ -273,7 +273,7 @@ table * {
     font-weight: bold;
 }
 
-td .textcontainer {
+td .textcontainer select {
   height: 60% !important;
   min-height: 60% !important;
   width: 100% !important;

@@ -102,7 +102,7 @@ function generaValori() {
     </nav>
 
 
-    <form>
+    <form action="../backend/agg_info.php" method="POST">
         <?php generaValori(); ?>
 
         <?php function generaAzienda($r) { ?>
@@ -146,7 +146,7 @@ function generaValori() {
 
         <br>
         <input type="submit" class="join-button2" value="Aggiorna">
-        <input type="button" class="join-button2" value="Cambia password">
+        <a href="agg_password.php" class="join-button2" value="Cambia password">
     </form>
 
     <script>
