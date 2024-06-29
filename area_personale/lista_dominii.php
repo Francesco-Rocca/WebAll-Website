@@ -69,6 +69,7 @@ $r = $stm->get_result();
         }
 
         .button-3 {
+            filter: brightness(120%);
             appearance: none;
             background-color: #2ea44f;
             border: 1px solid rgba(27, 31, 35, .15);
