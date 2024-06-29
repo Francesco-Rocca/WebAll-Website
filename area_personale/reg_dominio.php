@@ -37,6 +37,40 @@ $stm = $conn->prepare($sql);
 $stm->execute();
 
 $plans = $stm->get_result();
+
+$dom = "";
+$plan = 1;
+$pc = "100";
+$did = $_GET["edit"];
+
+if (isset($did)) {
+    $sql = "SELECT * FROM Subscriptions WHERE id_subscription = ?";
+    $stm = $conn->prepare($sql);
+    $stm->bind_param("i", $did);
+    $stm->execute();
+
+    $r = $stm->get_result();
+    if (!$r) {
+        header("location: ../index.html");
+        exit();
+    }
+
+    $r = $r->fetch_assoc();
+    if ($r["id_customer"] != $customer["id_customer"]) {
+        header("location: ../index.html");
+        exit();
+    }
+
+    $dom = $r["domain"];
+    $plan = $r["id_plan"];
+    $pc = $r["price_ceiling"];
+}
+
+function sel($r) {
+    if ($GLOBALS["plan"] == $r["id_plan"]) {
+        echo " selected";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +120,7 @@ $plans = $stm->get_result();
         <table class="alternate">
             <tr>
                 <td>Nome di dominio</td>
-                <td> <input type="text" class="textcontainer" name="domain"> </td>
+                <td> <input type="text" class="textcontainer" name="domain" value="<?php echo $dom; ?>" required> </td>
             </tr>
 
             <tr>
@@ -94,7 +128,7 @@ $plans = $stm->get_result();
                 <td>
                     <select name="plan">
                     <?php while ($row = $plans->fetch_assoc()) { ?>
-                        <option value="<?php echo $row["id_plan"]; ?>">
+                        <option value="<?php echo $row["id_plan"]; ?>" <?php sel($row); ?>>
                             <?php echo $row["name"]; ?> (max <?php echo $row["max_hits"]; ?> HIT/<?php echo $row["duration"]; ?>M, max <?php echo $row["max_yearly_hits"] ?> HIT/anno, <?php echo $row["price"]; ?> €/<?php echo $row["duration"]; ?>M, extra <?php echo $row["price_per_req"]; ?> €/HIT)
                         </option>
                     <?php } ?>
@@ -104,7 +138,7 @@ $plans = $stm->get_result();
 
             <tr>
                 <td>Tetto del costo (€ EUR)</td>
-                <td><input type="number" class="textcontainer" name="domain"></td>
+                <td><input type="number" class="textcontainer" name="price_ceiling" value="<?php echo $pc; ?>" required></td>
             </tr>
         </table>
 
