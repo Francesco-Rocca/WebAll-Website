@@ -146,7 +146,7 @@ function sel($r) {
         </table>
 
         <?php if (isset($_GET["error"])) { ?>
-            < class="error">
+            <div class="error">
                 <p>Il dominio specificato è già registrato o i valori inseriti non sono validi</p>
             </div>
         <?php } ?>
