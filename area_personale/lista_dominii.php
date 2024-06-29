@@ -57,7 +57,7 @@ $r = $stm->get_result();
         }
 
         th, td {
-            min-width: 8vw;
+            min-width: 10vw;
         }
 
         table.alternate tr:nth-child(even) {
@@ -189,8 +189,7 @@ $r = $stm->get_result();
                 <th>Dominio</th>
                 <th>Piano</th>
                 <th>Data di attivazione</th>
-                <th>Modifica</th>
-                <th>Elimina</t>
+                <th>Azioni</th>
         </tr>
 
             <?php while ($row = $r->fetch_assoc()) { ?>
@@ -198,8 +197,10 @@ $r = $stm->get_result();
                     <td> <?php echo $row["domain"]; ?> </td>
                     <td> <?php echo $row["name"]; ?> </td>
                     <td> <?php echo $row["activation_date"]; ?> </td>
-                    <td align="center"><a class="button-3" href="reg_dominio.php?edit=<?php echo $row["id_subscription"]; ?>">Modifica</a></td>
-                    <td align="center"><a class="delete" href="reg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a></td>
+                    <td align="center">
+                        <a class="button-3" href="reg_dominio.php?edit=<?php echo $row["id_subscription"]; ?>">Modifica</a>
+                        <a class="delete" href="reg_dominio.php?id=<?php echo $row["id_subscription"]; ?>">Elimina</a>
+                    </td>
                 </tr>
             <?php } ?>
         </table>
