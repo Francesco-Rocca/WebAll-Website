@@ -146,7 +146,7 @@ function generaValori() {
 
         <br>
         <input type="submit" class="join-button2" value="Aggiorna">
-        <a href="agg_password.php" class="join-button2" value="Cambia password">
+        <a href="agg_password.php" class="join-button2">Cambia password</a>
     </form>
 
     <script>

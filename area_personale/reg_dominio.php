@@ -108,7 +108,6 @@ $plans = $stm->get_result();
             </tr>
         </table>
 
-        <br>
         <input type="submit" class="join-button2" value="Aggiungi">
     </form>
 </body>

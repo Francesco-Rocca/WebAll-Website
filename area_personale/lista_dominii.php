@@ -198,7 +198,7 @@ $r = $stm->get_result();
             <?php } ?>
         </table>
 
-        <a href="reg_dominio.php" class="join-button2" value="Aggiundi dominio">
+        <a href="reg_dominio.php" class="join-button2">Aggiungi dominio</a>
     </div>
 </body>
 </html>
