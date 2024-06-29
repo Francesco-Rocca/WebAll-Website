@@ -74,6 +74,12 @@ function sel($r) {
         echo " selected";
     }
 }
+
+function docheck() {
+    if (isset($_GET["edit"])) {
+        echo " readonly";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -123,7 +129,7 @@ function sel($r) {
         <table class="alternate">
             <tr>
                 <td>Nome di dominio</td>
-                <td> <input type="text" class="textcontainer" name="domain" value="<?php echo $dom; ?>" required> </td>
+                <td> <input type="text" class="textcontainer" name="domain" value="<?php echo $dom; ?>" required <?php docheck(); ?>> </td>
             </tr>
 
             <tr>
