@@ -41,9 +41,10 @@ $plans = $stm->get_result();
 $dom = "";
 $plan = 1;
 $pc = "100";
-$did = $_GET["edit"];
+$did = "../backend/reg_dominio.php"
 
-if (isset($did)) {
+if (isset($_GET["edit"])) {
+    $did = "../backend/agg_dominio.php?id=" . $_GET["edit"];
     $sql = "SELECT * FROM Subscriptions WHERE id_subscription = ?";
     $stm = $conn->prepare($sql);
     $stm->bind_param("i", $did);
@@ -116,7 +117,7 @@ function sel($r) {
       </div>
     </nav>
 
-    <form action="../backend/reg_dominio.php" method="POST">
+    <form action="<?php echo $did; ?>" method="POST">
         <table class="alternate">
             <tr>
                 <td>Nome di dominio</td>
