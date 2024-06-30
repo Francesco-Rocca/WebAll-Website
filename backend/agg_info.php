@@ -90,7 +90,6 @@ try {
         $stm->bind_param("si", $_POST["name"], $customer["id_customer"]);
 
         $r = $stm->execute();
-        
 
         if (!$r || sizeof($stm->error_list) != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
@@ -108,6 +107,7 @@ try {
     }
 } catch (Exception $e) {
     header("location: ../area_personale/area_personale.php?error=true");
+    exit();
 }
 
 header("location: ../area_personale/area_personale.php?success=true");
