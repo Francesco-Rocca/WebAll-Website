@@ -64,7 +64,9 @@ try {
     }
 
     if ($customer["c_type"] === "I") {
-        $sql = "UPDATE IndividualCustomers SET first_name = ? WHERE id_customer = ?";
+        echo "Sta passando brutto bastardo";
+        exit();
+        $sql = "UPDATE Individuals SET first_name = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
         $stm->bind_param("si", $_POST["first_name"], $customer["id_vustomer"]);
 
@@ -74,7 +76,7 @@ try {
             header("location: ../area_personale/area_personale.php?error=true");
         }
 
-        $sql = "UPDATE IndividualCustomers SET last_name = ? WHERE id_customer = ?";
+        $sql = "UPDATE Individuals SET last_name = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
         $stm->bind_param("si", $_POST["last_name"], $customer["id_customer"]);
 
@@ -84,7 +86,7 @@ try {
             header("location: ../area_personale/area_personale.php?error=true");
         }
     } else {
-        $sql = "UPDATE InstitutionalCustomers SET name = ? WHERE id_customer = ?";
+        $sql = "UPDATE Organizations SET name = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
         $stm->bind_param("si", $_POST["name"], $customer["id_customer"]);
 
@@ -94,7 +96,7 @@ try {
             header("location: ../area_personale/area_personale.php?error=true");
         }
 
-        $sql = "UPDATE InstitutionalCustomers SET hq_address = ? WHERE id_customer = ?";
+        $sql = "UPDATE Organizations SET hq_address = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
         $stm->bind_param("si", $_POST["hq_address"], $customer["id_customer"]);
 
