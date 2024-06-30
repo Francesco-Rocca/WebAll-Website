@@ -35,7 +35,7 @@ if ($customer["password_hash"] !== hash("sha256", $_SESSION["password"])) {
 if (!isset($_POST["old"])
     || !isset($_POST["new"])
     || !isset($_POST["conf"])) {
-    header("location: ../area_personale/area_personale.php?error=true");
+    header("location: ../area_personale/agg_password.php?error=true");
     exit();
 }
 
@@ -44,12 +44,12 @@ $new = $_POST["new"];
 $conf = $_POST["conf"];
 
 if ($new != $conf) {
-    header("location: ../area_personale/area_personale.php?error=true");
+    header("location: ../area_personale/agg_password.php?error=true");
     exit();
 }
 
 if (hash("sha256", $old) != $customer["password_hash"]) {
-    header("location: ../area_personale/area_personale.php?error=true");
+    header("location: ../area_personale/agg_password.php?error=true");
     exit();
 }
 
@@ -70,4 +70,5 @@ try {
     exit();
 }
 
+$_SESSION["password"] = $new;
 header("location: ../area_personale/area_personale.php?success=true");
