@@ -64,11 +64,9 @@ try {
     }
 
     if ($customer["c_type"] === "I") {
-        echo "Sta passando brutto bastardo";
-        exit();
         $sql = "UPDATE Individuals SET first_name = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
-        $stm->bind_param("si", $_POST["first_name"], $customer["id_vustomer"]);
+        $stm->bind_param("si", $_POST["first_name"], $customer["id_customer"]);
 
         $r = $stm->execute();
 
