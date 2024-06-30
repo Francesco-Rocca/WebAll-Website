@@ -40,7 +40,7 @@ try {
     $r = $stm->execute();
     $_SESSION["email"] = $_POST["email"];
 
-    if (!$r || $stm->errno != 0) {
+    if (!$r || sizeof($stm->error_list) != 0) {
         header("location: ../area_personale/area_personale.php?error=true");
     }
 
@@ -50,7 +50,7 @@ try {
 
     $r = $stm->execute();
 
-    if (!$r || $stm->errno != 0) {
+    if (!$r || sizeof($stm->error_list) != 0) {
         header("location: ../area_personale/area_personale.php?error=true");
     }
 
@@ -60,7 +60,7 @@ try {
 
     $r = $stm->execute();
 
-    if (!$r || $stm->errno != 0) {
+    if (!$r || sizeof($stm->error_list) != 0) {
         header("location: ../area_personale/area_personale.php?error=true");
     }
 
@@ -71,7 +71,7 @@ try {
 
         $r = $stm->execute();
 
-        if (!$r || $stm->errno != 0) {
+        if (!$r || sizeof($stm->error_list) != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
         }
 
@@ -81,7 +81,7 @@ try {
 
         $r = $stm->execute();
 
-        if (!$r || $stm->errno != 0) {
+        if (!$r || sizeof($stm->error_list) != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
         }
     } else {
@@ -90,8 +90,9 @@ try {
         $stm->bind_param("si", $_POST["name"], $customer["id_customer"]);
 
         $r = $stm->execute();
+        
 
-        if (!$r || $stm->errno != 0) {
+        if (!$r || sizeof($stm->error_list) != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
         }
 
@@ -101,7 +102,7 @@ try {
 
         $r = $stm->execute();
 
-        if (!$r || $stm->errno != 0) {
+        if (!$r || sizeof($stm->error_list) != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
         }
     }
