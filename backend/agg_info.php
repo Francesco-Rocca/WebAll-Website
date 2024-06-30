@@ -33,9 +33,9 @@ if ($customer["password_hash"] !== hash("sha256", $_SESSION["password"])) {
 }
 
 try {
-    $sql = "UPDATE Customers SET email = ?";
+    $sql = "UPDATE Customers SET email = ? WHERE id_customer = ?";
     $stm = $conn->prepare($sql);
-    $stm->bind_param("s", $_POST["email"]);
+    $stm->bind_param("si", $_POST["email"], $customer["id_customer"]);
 
     $r = $stm->execute();
 
@@ -43,9 +43,9 @@ try {
         header("location: ../area_personale/area_personale.php?error=true");
     }
 
-    $sql = "UPDATE Customers SET billing_address = ?";
+    $sql = "UPDATE Customers SET billing_address = ? WHERE id_customer = ?";
     $stm = $conn->prepare($sql);
-    $stm->bind_param("s", $_POST["billing_address"]);
+    $stm->bind_param("si", $_POST["billing_address"], $customer["id_customer"]);
 
     $r = $stm->execute();
 
@@ -53,9 +53,9 @@ try {
         header("location: ../area_personale/area_personale.php?error=true");
     }
 
-    $sql = "UPDATE Customers SET phone = ?";
+    $sql = "UPDATE Customers SET phone = ? WHERE id_customer = ?";
     $stm = $conn->prepare($sql);
-    $stm->bind_param("s", $_POST["phone"]);
+    $stm->bind_param("si", $_POST["phone"], $customer["id_customer"]);
 
     $r = $stm->execute();
 
@@ -64,9 +64,9 @@ try {
     }
 
     if ($customer["c_type"] == 'I') {
-        $sql = "UPDATE Individuals SET first_name = ?";
+        $sql = "UPDATE Individuals SET first_name = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
-        $stm->bind_param("s", $_POST["first_name"]);
+        $stm->bind_param("si", $_POST["first_name"], $customer["id_vustomer"]);
 
         $r = $stm->execute();
 
@@ -74,9 +74,9 @@ try {
             header("location: ../area_personale/area_personale.php?error=true");
         }
 
-        $sql = "UPDATE Individuals SET last_name = ?";
+        $sql = "UPDATE Individuals SET last_name = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
-        $stm->bind_param("s", $_POST["last_name"]);
+        $stm->bind_param("si", $_POST["last_name"], $customer["id_customer"]);
 
         $r = $stm->execute();
 
@@ -84,9 +84,9 @@ try {
             header("location: ../area_personale/area_personale.php?error=true");
         }
     } else {
-        $sql = "UPDATE Organizations SET name = ?";
+        $sql = "UPDATE Organizations SET name = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
-        $stm->bind_param("s", $_POST["name"]);
+        $stm->bind_param("si", $_POST["name"], $customer["id_customer"]);
 
         $r = $stm->execute();
 
@@ -94,9 +94,9 @@ try {
             header("location: ../area_personale/area_personale.php?error=true");
         }
 
-        $sql = "UPDATE Organizations SET hq_address = ?";
+        $sql = "UPDATE Organizations SET hq_address = ? WHERE id_customer = ?";
         $stm = $conn->prepare($sql);
-        $stm->bind_param("s", $_POST["hq_address"]);
+        $stm->bind_param("si", $_POST["hq_address"], $customer["id_customer"]);
 
         $r = $stm->execute();
 

@@ -50,9 +50,9 @@ if ($r["id_customer"] != $customer["id_customer"]) {
 }
 
 try {
-    $sql = "UPDATE Subscriptions SET id_plan = ?";
+    $sql = "UPDATE Subscriptions SET id_plan = ? WHERE id_subscription = ?";
     $stm = $conn->prepare($sql);
-    $stm->bind_param("i", $_POST["plan"]);
+    $stm->bind_param("ii", $_POST["plan"], $_GET["id"]);
 
     $r = $stm->execute();
 
@@ -60,9 +60,9 @@ try {
         header("location: ../area_personale/reg_dominio.php?error=true");
     }
 
-    $sql = "UPDATE Subscriptions SET price_ceiling = ?";
+    $sql = "UPDATE Subscriptions SET price_ceiling = ? WHERE id_subscription = ?";
     $stm = $conn->prepare($sql);
-    $stm->bind_param("i", $_POST["price_ceiling"]);
+    $stm->bind_param("ii", $_POST["price_ceiling"], $_GET["id"]);
 
     $r = $stm->execute();
 
