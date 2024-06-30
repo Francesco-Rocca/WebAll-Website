@@ -58,7 +58,7 @@ $p_hash = hash("sha256", $new);
 try {
     $sql = "UPDATE Customers SET password_hash = ? WHERE id_subscription = ?";
     $stm = $conn->prepare($sql);
-    $stm->bind_param("si", $p_hash, $_GET["id"]);
+    $stm->bind_param("si", $p_hash, $customer["id_customer"]);
 
     $r = $stm->execute();
 
