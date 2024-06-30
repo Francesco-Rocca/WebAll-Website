@@ -129,7 +129,7 @@ function generaValori() {
                 </tr>
                 <tr>
                     <td>Data di registrazione</td>
-                    <td name="c_type" value="O"> <?php echo $r["registration_date"]; ?> </td>
+                    <td> <?php echo $r["registration_date"]; ?> </td>
                 </tr>
                 <tr>
                     <td>Codice utente</td>
@@ -162,7 +162,7 @@ function generaValori() {
                 </tr>
                 <tr>
                     <td>Data di registrazione</td>
-                    <td name="c_type" value="I"> <?php echo $r["registration_date"]; ?> </td>
+                    <td> <?php echo $r["registration_date"]; ?> </td>
                 </tr>
                 <tr>
                     <td>Codice utente</td>
