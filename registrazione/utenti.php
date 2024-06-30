@@ -6,6 +6,13 @@
     <title>azienda</title>
     <link rel="stylesheet" href="../style.css">
     <script src="http://52.47.171.54:8080/service/init.js"></script>
+
+    <style>
+        .error {
+            width: 500px;
+            margin-bottom: 24px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
