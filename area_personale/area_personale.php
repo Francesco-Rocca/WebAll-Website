@@ -185,12 +185,16 @@ function generaValori() {
 
         <br>
         <input type="submit" class="join-button2" value="Aggiorna">
-        <input type="button" href="agg_password.php" class="join-button2" value="Cambia password">
+        <input type="button" href="agg_password.php" class="join-button2" value="Cambia password" onclick="cpw()">
     </form>
 
     <script>
         function logout() {
             window.location = "../backend/logout.php";
+        }
+
+        function cpw() {
+            window.location = 'agg_password.php'
         }
     </script>
 </body>
