@@ -108,7 +108,7 @@ function generaValori() {
         <?php function generaAzienda($r) { ?>
             <table class="alternate">
                 <tr>
-                    <td>Ragione Sociale</td>
+                    <td>Ragione sociale</td>
                     <td> <input type="text" class="textcontainer" name="name" value=<?php echo "\"" . $r["name"] . "\""; ?>> </td>
                 </tr>
                 <tr>
@@ -125,8 +125,7 @@ function generaValori() {
                 </tr>
                 <tr>
                     <td>Numero di telefono</td>
-                    <td> <input type="tel" pattern="[0-9]{3} [0-9]{3} 
- [0-9]{4}"class="textcontainer" name="phone" value=<?php echo "\"" . $r["phone"] . "\""; ?>> </td>
+                    <td> <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}"class="textcontainer" name="phone" value=<?php echo "\"" . $r["phone"] . "\""; ?>> </td>
                 </tr>
                 <tr>
                     <td>Data di registrazione</td>
@@ -141,7 +140,34 @@ function generaValori() {
 
         <?php function generaUtente($r) { ?>
             <table class="alternate">
-                
+                <tr>
+                    <td>Nome</td>
+                    <td> <input type="text" class="textcontainer" name="first_name" value=<?php echo "\"" . $r["first_name"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Cognome</td>
+                    <td> <input type="text" class="textcontainer" name="last_name" value=<?php echo "\"" . $r["first_name"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Indirizzo E-Mail</td>
+                    <td> <input type="text" class="textcontainer" name="email" value=<?php echo "\"" . $r["email"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Indirizzo di fatturazione</td>
+                    <td> <input type="text" class="textcontainer" name="billing_address" value=<?php echo "\"" . $r["billing_address"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Numero di telefono</td>
+                    <td> <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}"class="textcontainer" name="phone" value=<?php echo "\"" . $r["phone"] . "\""; ?>> </td>
+                </tr>
+                <tr>
+                    <td>Data di registrazione</td>
+                    <td> <?php echo $r["registration_date"]; ?> </td>
+                </tr>
+                <tr>
+                    <td>Codice utente</td>
+                    <td> <?php echo $r["id_customer"]; ?> </td>
+                </tr>
             </table>
         <?php } ?>
 
