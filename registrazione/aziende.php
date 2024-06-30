@@ -11,6 +11,7 @@
         .error {
             width: 500px;
             margin-bottom: 24px;
+            margin-left: 0px;
         }
     </style>
 </head>
