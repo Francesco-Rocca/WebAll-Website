@@ -40,7 +40,7 @@ try {
     $r = $stm->execute();
     $_SESSION["email"] = $_POST["email"];
 
-    if (!$r || $conn->errno != 0) {
+    if (!$r || $stm->errno != 0) {
         header("location: ../area_personale/area_personale.php?error=true");
     }
 
@@ -50,7 +50,7 @@ try {
 
     $r = $stm->execute();
 
-    if (!$r || $conn->errno != 0) {
+    if (!$r || $stm->errno != 0) {
         header("location: ../area_personale/area_personale.php?error=true");
     }
 
@@ -60,7 +60,7 @@ try {
 
     $r = $stm->execute();
 
-    if (!$r || $conn->errno != 0) {
+    if (!$r || $stm->errno != 0) {
         header("location: ../area_personale/area_personale.php?error=true");
     }
 
@@ -71,7 +71,7 @@ try {
 
         $r = $stm->execute();
 
-        if (!$r || $conn->errno != 0) {
+        if (!$r || $stm->errno != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
         }
 
@@ -81,7 +81,7 @@ try {
 
         $r = $stm->execute();
 
-        if (!$r || $conn->errno != 0) {
+        if (!$r || $stm->errno != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
         }
     } else {
@@ -91,7 +91,7 @@ try {
 
         $r = $stm->execute();
 
-        if (!$r || $conn->errno != 0) {
+        if (!$r || $stm->errno != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
         }
 
@@ -101,7 +101,7 @@ try {
 
         $r = $stm->execute();
 
-        if (!$r || $conn->errno != 0) {
+        if (!$r || $stm->errno != 0) {
             header("location: ../area_personale/area_personale.php?error=true");
         }
     }
