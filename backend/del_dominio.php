@@ -52,7 +52,7 @@ if ($r["id_customer"] != $customer["id_customer"]) {
 try {
     $sql = "DELETE FROM Subscriptions WHERE id_subscription = ?";
     $stm = $conn->prepare($sql);
-    $stm->bind_param("i", $_POST["id"]);
+    $stm->bind_param("i", $_GET["id"]);
 
     $r = $stm->execute();
     if (!$r) {
