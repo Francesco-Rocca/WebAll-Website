@@ -76,16 +76,16 @@ if ($customer["password_hash"] !== hash("sha256", $_SESSION["password"])) {
       </div>
     </nav>
 
-    <form action="<?php echo $did; ?>" method="POST">
+    <form action="../backend/agg_password.php" method="POST">
         <table class="alternate">
             <tr>
                 <td>Vecchia password</td>
-                <td> <input type="text" class="textcontainer" name="old" required> </td>
+                <td> <input type="password" class="textcontainer" name="old" required> </td>
             </tr>
 
             <tr>
                 <td>Nuova passowrd</td>
-                <td> <input type="text" class="textcontainer" name="new" required> </td>
+                <td> <input type="password" class="textcontainer" name="new" required> </td>
             </tr>
 
             <tr>
