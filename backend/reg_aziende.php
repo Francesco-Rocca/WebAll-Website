@@ -25,7 +25,7 @@ if (!isset($_POST["ragionesoc"])
       || !isset($_POST["password-conf"])
       || !isset($_POST["indirizzo"])) {
 
-    header("location: ../registrazione/aziende.html");
+    header("location: ../registrazione/aziende.php");
 }
 
 $ragione_sociale = $_POST["ragionesoc"];
@@ -36,15 +36,34 @@ $password = $_POST["password"];
 $password_conf = $_POST["password-conf"];
 $indirizzo = $_POST["indirizzo"];
 
+if ($password != $password_conf) {
+    header("location: ../registrazione/aziende.php?error=true");
+    ob_end_clean();
+    exit();
+}
 
-$stm->bind_param("ssss", $email, $password, $indirizzo, $numtel);
+$p_hash = hash("sha256", $password);
+
+$stm->bind_param("ssss", $email, $p_hash, $indirizzo, $numtel);
 $s = $stm->execute();
+
+if (!$s) {
+    header("location: ../registrazione/aziende.php?error=true");
+    ob_end_clean();
+    exit();
+}
 
 $sql = "INSERT INTO Organizations (id_customer, name, hq_address) VALUES (LAST_INSERT_ID(), ?, ?)";
 $stm = $conn->prepare($sql);
 
 $stm->bind_param("ss", $ragione_sociale, $sede);
 $s = $stm->execute();
+
+if (!$s) {
+    header("location: ../registrazione/aziende.php?error=true");
+    ob_end_clean();
+    exit();
+}
 
 session_start();
 $_SESSION["email"] = $email;

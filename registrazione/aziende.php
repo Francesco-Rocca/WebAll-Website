@@ -17,31 +17,32 @@
                 <a href="../siamo.html">Chi siamo</a>
                 <a href="../accedi.html">Accedi</a>
             </div>
-            <button class="join-button" disabled>Utilizza anche tu WebAll</button>
+            <button class="join-button"disabled>Utilizza anche tu WebAll</button>
         </div>
     </nav>
     
     <div class="login-container3">
-        <h1 class="login-title3">Registrazione Utente</h1>
-        <form action="../backend/reg_utenti.php" method="POST">
+        <h1 class="login-title3">Registrazione Azienda</h1>
+        <form action="../backend/reg_aziende.php" method="POST">
+            <?php if (isset($_GET["error"])) { ?>
+                <div class="error">
+                    <p>Ops... Si è verificato un errore, controlla i dati</p>
+                </div>
+            <?php } ?>
+
             <input type="email" class="textcontainer" name="email" placeholder="Email utente" required><br><br>
             <input type="password"  class="textcontainer" name="password" placeholder="Password" required><br><br>
             <input type="password"  class="textcontainer" name="password-conf" placeholder="Conferma password" required><br><br>
-            <input type="text"  class="textcontainer" name="nome" placeholder="Nome" required><br><br>
-            <input type="text"  class="textcontainer" name="cognome" placeholder="Cognome" required><br><br>
-            <input type="tel" pattern="+[0-9]{1,3} [0-9]{3} [0-9]{3} 
- [0-9]{4}" class="textcontainer" name="num-tel" placeholder="Numero felefono" required><br><br>
+            <input type="tel" pattern="+[0-9]{1,3} [0-9]{3} [0-9]{3} [0-9]{4}" class="textcontainer" name="num-tel" placeholder="Numero felefono" required><br><br>
             <input type="text"  class="textcontainer" name="indirizzo" placeholder="Indirizzo fatturazione" required><br><br>
+            <input type="text"  class="textcontainer" name="ragionesoc" placeholder="Ragione sociale" required><br><br>
+            <input type="text"  class="textcontainer" name="indirizzo-sede" placeholder="Indirizzo sede" required><br><br>
             <button id="submitButton" type="submit">Registrati</button>
         </form>
     </div>
     <div class="immagelogo2">
         <img src="../logo_bianco.png" alt="Logo" />
     </div>
-    <script>
-        function openPage() {
-            window.location.href = 'registrazione.html';
-        }
-    </script>
+    
 </body>
 </html>

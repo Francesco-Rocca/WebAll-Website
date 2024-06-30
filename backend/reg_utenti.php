@@ -25,7 +25,7 @@ if (!isset($_POST["nome"])
       || !isset($_POST["password-conf"])
       || !isset($_POST["indirizzo"])) {
 
-    header("location: ../registrazione/utenti.html");
+    header("location: ../registrazione/utenti.php");
 }
 
 $nome = $_POST["nome"];
@@ -36,9 +36,22 @@ $password = $_POST["password"];
 $password_conf = $_POST["password-conf"];
 $indirizzo = $_POST["indirizzo"];
 
+if ($password != $password_conf) {
+    header("location: ../registrazione/utenti.php?error=true");
+    ob_end_clean();
+    exit();
+}
 
-$stm->bind_param("ssss", $email, $password, $indirizzo, $numtel);
+$p_hash = hash("sha256", $password);
+
+$stm->bind_param("ssss", $email, $p_hash, $indirizzo, $numtel);
 $s = $stm->execute();
+
+if (!$s) {
+    header("location: ../registrazione/utenti.php?error=true");
+    ob_end_clean();
+    exit();
+}
 
 $sql = "INSERT INTO Individuals (id_customer, first_name, last_name) VALUES (LAST_INSERT_ID(), ?, ?)";
 $stm = $conn->prepare($sql);
@@ -46,12 +59,14 @@ $stm = $conn->prepare($sql);
 $stm->bind_param("ss", $nome, $cognome);
 $s = $stm->execute();
 
-session_start();
-$_SESSION["email"] = $mail;
-$_SESSION["password"] = $password;
+if (!$s) {
+    header("location: ../registrazione/utenti.php?error=true");
+    ob_end_clean();
+    exit();
+}
 
 session_start();
-$_SESSION["email"] = $email;
+$_SESSION["email"] = $mail;
 $_SESSION["password"] = $password;
 
 header("location: ../area_personale/area_personale.php");
