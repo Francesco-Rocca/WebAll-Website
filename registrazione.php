@@ -12,9 +12,9 @@
         <div class="container">
         <a href="#" class="logo"><img src="weball_logo.png" alt="Logo" /></a>
         <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="documentazione.html">Documentazione</a>
-          <a href="siamo.html">Chi siamo</a>
+          <a href="index.php">Home</a>
+          <a href="documentazione.php">Documentazione</a>
+          <a href="siamo.php">Chi siamo</a>
           <a href="accedi.php">Accedi</a>
         </div>
         <button class="join-button">Utilizza anche tu WebAll</button>

@@ -21,9 +21,9 @@ if (session_status() == PHP_SESSION_ACTIVE && $_SESSION["email"]) {
         <div class="container">
         <a href="#" class="logo"><img src="weball_logo.png" alt="Logo" /></a>
         <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="documentazione.html">Documentazione</a>
-          <a href="siamo.html">Chi siamo</a>
+          <a href="index.php">Home</a>
+          <a href="documentazione.php">Documentazione</a>
+          <a href="siamo.php">Chi siamo</a>
           <a href="accedi.php"disabled>Accedi</a>
         </div>
         <button class="join-button" onclick="openPage()">Utilizza anche tu WebAll</button>
@@ -43,7 +43,7 @@ if (session_status() == PHP_SESSION_ACTIVE && $_SESSION["email"]) {
     </div>
     <script> //funzione per aprire nuova pagina per la registrazione di un'utente
         function openPage() {
-            window.location.href = 'registrazione.html';
+            window.location.href = 'registrazione.php';
         }
     </script>
 </body>

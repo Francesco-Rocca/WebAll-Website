@@ -28,7 +28,7 @@ $stm->execute();
 $customer = $stm->get_result()->fetch_assoc();
 
 if ($customer["password_hash"] !== hash("sha256", $_SESSION["password"])) {
-    header("location: ../index.html");
+    header("location: ../index.php");
     exit();
 }
 
@@ -53,13 +53,13 @@ if (isset($_GET["edit"])) {
 
     $r = $stm->get_result();
     if (!$r) {
-        header("location: ../index.html");
+        header("location: ../index.php");
         exit();
     }
 
     $r = $r->fetch_assoc();
     if ($r["id_customer"] != $customer["id_customer"]) {
-        header("location: ../index.html");
+        header("location: ../index.php");
         exit();
     }
 
@@ -118,7 +118,7 @@ function docheck() {
         <div class="nav-links">
           <a href="lista_dominii.php">Dominii</a>
           <a href="area_personale.php">Dashboard</a>
-          <!-- <a href="../siamo.html">Chi siamo</a>
+          <!-- <a href="../siamo.php">Chi siamo</a>
           <a href="../accedi.php">Accedi</a> -->
         </div>
         <button class="join-button" onclick="logout()">Logout</button>

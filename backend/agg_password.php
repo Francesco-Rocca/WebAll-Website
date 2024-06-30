@@ -28,7 +28,7 @@ $stm->execute();
 $customer = $stm->get_result()->fetch_assoc();
 
 if ($customer["password_hash"] !== hash("sha256", $_SESSION["password"])) {
-    header("location: ../index.html");
+    header("location: ../index.php");
     exit();
 }
 
