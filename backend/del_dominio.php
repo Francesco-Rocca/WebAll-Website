@@ -54,9 +54,13 @@ try {
     $stm = $conn->prepare($sql);
     $stm->bind_param("i", $_POST["id"]);
 
-    $stm->execute();
+    $r = $stm->execute();
+    if (!$r) {
+        header("location: ../area_personale/lista_dominii.php?error=true");
+        exit();
+    }
 } catch (Exception $e) {
     header("location: ../area_personale/lista_dominii.php?error=true");
 }
 
-header("locatioerrorn: ../area_personale/lista_dominii.php?success=true");
+header("location: ../area_personale/lista_dominii.php?success=true");
