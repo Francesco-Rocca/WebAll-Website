@@ -38,6 +38,7 @@ try {
     $stm->bind_param("si", $_POST["email"], $customer["id_customer"]);
 
     $r = $stm->execute();
+    $_SESSION["email"] = $_POST["email"];
 
     if (!$r) {
         header("location: ../area_personale/area_personale.php?error=true");
