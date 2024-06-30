@@ -56,8 +56,8 @@ try {
 
     $r = $stm->execute();
 
-    if ($r) {
-        header("location: ../area_personale/lista_dominii.php");
+    if (!$r) {
+        header("location: ../area_personale/reg_dominio.php?error=true");
     }
 
     $sql = "UPDATE Subscriptions SET price_ceiling = ?";
@@ -66,8 +66,8 @@ try {
 
     $r = $stm->execute();
 
-    if ($r) {
-        header("location: ../area_personale/lista_dominii.php");
+    if (!$r) {
+        header("location: ../area_personale/reg_dominio.php?error=true");
     }
 } catch (Exception $e) {
     header("location: ../area_personale/reg_dominio.php?error=true");

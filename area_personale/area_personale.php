@@ -171,6 +171,18 @@ function generaValori() {
             </table>
         <?php } ?>
 
+        <?php if (isset($_GET["error"])) { ?>
+            <div class="error">
+                <p>Ops... Si è verificato un errore</p>
+            </div>
+        <?php } ?>
+
+        <?php if (isset($_GET["success"])) { ?>
+            <div class="success">
+                <p>Fatto! Operazione completta con successo</p>
+            </div>
+        <?php } ?>
+
         <br>
         <input type="submit" class="join-button2" value="Aggiorna">
         <input type="button" href="agg_password.php" class="join-button2" value="Cambia password">
