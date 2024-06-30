@@ -56,17 +56,17 @@ if (hash("sha256", $old) != $customer["password_hash"]) {
 $p_hash = hash("sha256", $new);
 
 try {
-    $sql = "UPDATE Customers SET password_hash = ? WHERE id_subscription = ?";
+    $sql = "UPDATE Customers SET password_hash = ? WHERE id_customer = ?";
     $stm = $conn->prepare($sql);
     $stm->bind_param("si", $p_hash, $customer["id_customer"]);
 
     $r = $stm->execute();
 
     if (!$r) {
-        header("location: ../area_personale/area_personale.php?error=true");
+        header("location: ../area_personale/agg_password.php?error=true");
     }
 } catch (Exception $e) {
-    header("location: ../area_personale/area_personale.php?error=true");
+    header("location: ../area_personale/agg_password.php?error=true");
     exit();
 }
 
