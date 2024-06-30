@@ -61,6 +61,7 @@ try {
     }
 } catch (Exception $e) {
     header("location: ../area_personale/lista_dominii.php?error=true");
+    exit();
 }
 
 header("location: ../area_personale/lista_dominii.php?success=true");
