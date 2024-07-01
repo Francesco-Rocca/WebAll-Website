@@ -87,7 +87,7 @@ function docheck() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>area personale</title>
+    <title>WebAll</title>
     <link rel="stylesheet" href="../style.css">
     <script src="http://52.47.171.54:8080/service/init.js"></script>
     <style>
